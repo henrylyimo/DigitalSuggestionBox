@@ -15,7 +15,21 @@ Route::get('/', function () {
     return view('welcome');
 });
 
+
+
 Auth::routes();
 
-Route::get('/home', 'HomeController@index')->name('home');
+
+//pages controller
+Route::get('/date',['uses' => 'PagesController@date']);
+Route::get('/about',['uses' => 'PagesController@about']);
+Route::get('/homepage',['uses' => 'PagesController@homepage']);
+Route::get('/profilepage',['uses' => 'PagesController@profilepage']);
+Route::get('/update',['uses' => 'PagesController@updatePage']);
+
+
+
+
+
+Route::get('/home', 'HomeController@home')->name('home');
 Route::get('/posts', 'PostsController@posts')->name('posts');

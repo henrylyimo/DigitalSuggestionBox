@@ -1,0 +1,70 @@
+body {
+  font-size: 10px;
+  box-sizing: border-box;
+}
+.navbar
+{
+  color: black;
+}
+
+.navbar .far
+{
+  color: white;
+}
+.img-circle
+{
+  height: 50px;
+  width: 50px;
+  border-radius: 50%;
+}
+.image .img-circle
+{
+  height: 30px;
+  width: 30px;
+  border-radius: 50%;
+}
+.info .d-block
+{
+  color: white;
+}
+.navbar-brand 
+{
+  
+  color: black;
+  font-weight: bold;
+}
+.main-sidebar .nav-item:hover
+{
+  
+  cursor: pointer;
+  border-left: 3px solid #3490dc;
+  
+ 
+}
+.active
+{
+  cursor: pointer;
+  border-left: 3px solid #ff65f6;
+  background-color: transparent;
+ 
+}
+.main-sidebar
+{ 
+  background-color: dark;
+}
+.input-group 
+{
+  color: black;
+  background-color: white;
+}
+.input-group .form-control
+{
+  color: black;
+  background-color: white;
+}
+
+.sidebar .nav-link
+{
+  color: white;
+ 
+}

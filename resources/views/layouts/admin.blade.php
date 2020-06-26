@@ -24,182 +24,174 @@
     <link rel="stylesheet" href="{{ asset('plugins/daterangepicker/daterangepicker.css') }}">
     <!-- summernote -->
     <link rel="stylesheet" href="{{ asset('plugins/summernote/summernote-bs4.css') }}">
+
+    <link rel="stylesheet" href="{{ asset('css/styles.css') }}">
     <!-- Google Font: Source Sans Pro -->
     <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700" rel="stylesheet">
+    
 </head>
 <body class="hold-transition sidebar-mini layout-fixed">
 <div class="wrapper">
 
     <!-- Navbar -->
-    <nav class="main-header navbar navbar-expand navbar-white navbar-light">
-        <!-- Left navbar links -->
-        <ul class="navbar-nav">
-            <li class="nav-item">
-                <a class="nav-link" data-widget="pushmenu" href="#"><i class="fas fa-bars"></i></a>
-            </li>
-            <li class="nav-item d-none d-sm-inline-block">
-                <a href=" " class="nav-link">Home</a>
-            </li>
-            <li class="nav-item d-none d-sm-inline-block">
-                <a href=" " class="nav-link">Updates</a>
-            </li>
-        </ul>
+   
+    <nav class="main-header navbar navbar-expand-sm navbar-dark">
 
-        <!-- SEARCH FORM -->
-        <form class="form-inline ml-3">
-            <div class="input-group input-group-sm">
-                <input class="form-control form-control-navbar" type="search" placeholder="Search" aria-label="Search">
-                <div class="input-group-append">
-                    <button class="btn btn-navbar" type="submit">
-                        <i class="fas fa-search"></i>
-                    </button>
-                </div>
-            </div>
-        </form>
+
+    <!----Left navbar links--->
+    <ul class="navbar-nav">
+        <li class="nav-item">
+            <a href="#" class="nav-link" data-widget="pushmenu"><i class="fas fa-bars"></i></a>
+        </li>
+    </ul>
+     
 
         <!-- Right navbar links -->
         <ul class="navbar-nav ml-auto">
+          <li class="nav-tem">
+            
+        <form class="form-inline ml-auto">
+          <div class="input-group input-group-sm ">
+              <input class="form-control form-control-navbar " type="search" placeholder="Search" aria-label="Search">
+              <div class="input-group-append">
+                  <button class="btn btn-navbar  bg-white" type="submit">
+                      <i class="fas fa-search"></i>
+                  </button>
+              </div>
+          </div>
+      </form>
+          </li>
             <!-- Messages Dropdown Menu -->
-            <li class="nav-item dropdown">
-                <a class="nav-link" data-toggle="dropdown" href="#">
-                    <i class="far fa-comments"></i>
-                    <span class="badge badge-danger navbar-badge">3</span>
-                </a>
-                <div class="dropdown-menu dropdown-menu-lg dropdown-menu-right">
-                    <a href="#" class="dropdown-item">
-                        <!-- Message Start -->
-                        <div class="media">
-                            <img src=" " alt="User Avatar" class="img-size-50 mr-3 img-circle">
-                            <div class="media-body">
-                                <h3 class="dropdown-item-title">
-                                    John Malupa
-                                    <span class="float-right text-sm text-danger"><i class="fas fa-star"></i></span>
-                                </h3>
-                                <p class="text-sm">What about the HIV/AIDS issues</p>
-                                <p class="text-sm text-muted"><i class="far fa-clock mr-1"></i> 5 Hours Ago</p>
-                            </div>
-                        </div>
-                        <!-- Message End -->
-                    </a>
-                    <div class="dropdown-divider"></div>
-                    <a href="#" class="dropdown-item">
-                        <!-- Message Start -->
-                        <div class="media">
-                            <img src="{{ asset('/Logo/picture.jpg') }}" alt="User Avatar" class="img-size-50 img-circle mr-3">
-                            <div class="media-body">
-                                <h3 class="dropdown-item-title">
-                                    Robert Patrick
-                                    <span class="float-right text-sm text-muted"><i class="fas fa-star"></i></span>
-                                </h3>
-                                <p class="text-sm">I think we need guidance in food category</p>
-                                <p class="text-sm text-muted"><i class="far fa-clock mr-1"></i> 10 Hours Ago</p>
-                            </div>
-                        </div>
-                        <!-- Message End -->
-                    </a>
-                    <div class="dropdown-divider"></div>
-                    <a href="#" class="dropdown-item">
-                        <!-- Message Start -->
-                        <div class="media">
-                            <img src=" " alt="User Avatar" class="img-size-50 img-circle mr-3">
-                            <div class="media-body">
-                                <h3 class="dropdown-item-title">
-                                    Zabron Huggins
-                                    <span class="float-right text-sm text-warning"><i class="fas fa-star"></i></span>
-                                </h3>
-                                <p class="text-sm">We need too much power to overcome problems</p>
-                                <p class="text-sm text-muted"><i class="far fa-clock mr-1"></i> 9 Hours Ago</p>
-                            </div>
-                        </div>
-                        <!-- Message End -->
-                    </a>
-            </li>
-            <!-- Notifications Dropdown Menu -->
-            <li class="nav-item dropdown">
-                <a class="nav-link" data-toggle="dropdown" href="#">
-                    <i class="far fa-bell"></i>
-                    <span class="badge badge-warning navbar-badge">15</span>
-                </a>
-                <div class="dropdown-menu dropdown-menu-lg dropdown-menu-right">
-                    <span class="dropdown-item dropdown-header">15 Notifications</span>
-                    <div class="dropdown-divider"></div>
-                    <a href="#" class="dropdown-item">
-                        <i class="fas fa-envelope mr-2"></i> 4 new messages
-                        <span class="float-right text-muted text-sm">3 mins</span>
-                    </a>
-                    <div class="dropdown-divider"></div>
-                    <a href="#" class="dropdown-item">
-                        <i class="fas fa-users mr-2"></i> 
-                        <span class="float-right text-muted text-sm">12 hours</span>
-                    </a>
-                    <div class="dropdown-divider"></div>
-                    <a href="#" class="dropdown-item">
-                        <i class="fas fa-file mr-2"></i> 
-                        <span class="float-right text-muted text-sm"></span>
-                    </a>
-                    <div class="dropdown-divider"></div>
-                    <a href="#" class="dropdown-item dropdown-footer"></a>
+
+            
+             
+            <!--<li class="nav-item">
+            <div class="user-panel d-flex">
+                <div class="image">
+                    <img src="{{ asset('/Logo/picture.jpg') }}" class="img-circle" >
                 </div>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" data-widget="control-sidebar" data-slide="true" href="#">
-                    <i class="fas fa-th-large"></i>
-                </a>
-            </li>
-        </ul>
+                <div class="info">
+                    <a href=" " class="d-block" >{{ Auth::user()->name }}</a>
+                </div>
+                
+            </div>
+          </li> -->
+
+          <!-- Example single danger button -->
+
+
+        
     </nav>
     <!-- /.navbar -->
 
     <!-- Main Sidebar Container -->
-    <aside class="main-sidebar sidebar-dark-primary elevation-4">
+    <aside class="main-sidebar  elevation-4 bg-dark ">
         <!-- Brand Logo -->
-        <a href=" " class="brand-link">
-            <img src="{{ asset('/Logo/logoDashboard.jpg') }}" alt="DigitalSuggessionBox" class="brand-image elevation-1 pr-2"
-                 style="max-height: 30px; width:30;" >
-            <span class="brand-text font-weight-light"></span>
-        </a>
+        <div class="navbar-brand pl-4">
+          <div class="row">
+            <img src="{{ asset('/Logo/logoDashboard.jpg') }}" height="40px" alt="DigitalSuggessionBox" class="brand-image"> 
+            
+          </div>
+        </div>
 
         <!-- Sidebar -->
         <div class="sidebar">
             <!-- Sidebar user panel (optional) -->
-            <div class="user-panel mt-4 pb-2 mb-3 d-flex">
-                <div class="image">
-                    <img src="{{ asset('/Logo/picture.jpg') }}" class="img-circle elevation-3">
-                </div>
-                <div class="info">
-                    <a href=" " class="d-block">{{ Auth::user()->name }}</a>
-                </div>
-            </div>
+            
 
             <!-- Sidebar Menu -->
             <nav class="mt-2">
                 <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
                     <!-- Add icons to the links using the .nav-icon class
                          with font-awesome or any other icon font library -->
-                    <li class="nav-item has-treeview menu-open">
-                        <a href="#" class="nav-link active">
-                            <i class="nav-icon fas fa-tachometer-alt"></i>
+                    <li class="nav-item has-treeview menu-open ">
+                        <a href="/homepage" class="nav-link ">
+                            <i class="nav-icon fas fa-home"></i>
                             <p>
-                                Dashboard
-                                <i class="right fas fa-angle-left"></i>
+                                Home
                             </p>
                         </a>
                     </li>
-                    <li class="nav-header">Explore</li>
                     <li class="nav-item">
-                        <a href="pages/calendar.html" class="nav-link">
-                            <i class="nav-icon far fa-calendar-alt"></i>
+                        <a href="/update" class="nav-link">
+                            <i class="nav-icon far fa-address-card"></i>
                             <p>
-                                Calendar
-                                <span class="badge badge-info right">2</span>
+                                Update
                             </p>
                         </a>
                     </li>
+                    <li class="nav-item">
+                        <a href="/profilepage" class="nav-link">
+                            <i class="nav-icon far fa-user"></i>
+                            <p>
+                                Profile
+                            </p>
+                        </a>
+                    </li>
+
+                    <li class="nav-item">
+                      <a href="/about" class="nav-link">
+                          <i class="nav-icon far fa-align-left"></i>
+                          <p>
+                              About
+                          </p>
+                      </a>
+                  </li>
+
+                  <li class="nav-item">
+                    <a href="pages/calendar.html" class="nav-link">
+                        <i class="nav-icon far fa-calendar-alt"></i>
+                        <p>
+                            Calendar
+                        </p>
+                    </a>
+                </li>
+                <li class="nav-item has-treeview">
+                    <a href=" " class="nav-link">
+                        <i class="nav-icon far fa-newspaper-0"></i>
+                        <p>
+                            Challange 
+                            <i class="fas fa-angle-left right"></i>
+                        </p>
+                    </a>
+                    <ul class="nav nav-treeview">
+                        <li class="nav-item">
+                            <a href=" " class="nav-link">
+                                <i class="far fa-circle nav-icon"></i>
+                                <p>Academy</p>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="pages/mailbox/compose.html" class="nav-link">
+                                <i class="far fa-circle nav-icon"></i>
+                                <p>Security</p>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="pages/mailbox/read-mail.html" class="nav-link">
+                                <i class="far fa-circle nav-icon"></i>
+                                <p>Corruption</p>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="pages/mailbox/read-mail.html" class="nav-link">
+                                <i class="far fa-circle nav-icon"></i>
+                                <p>Cafeteria</p>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="pages/mailbox/read-mail.html" class="nav-link">
+                                <i class="far fa-circle nav-icon"></i>
+                                <p>Person Issue</p>
+                            </a>
+                        </li>
+                    </ul>
+                </li>
                     <li class="nav-item has-treeview">
                         <a href=" " class="nav-link">
                             <i class="nav-icon far fa-envelope"></i>
                             <p>
-                                Mailbox
+                                Message section
                                 <i class="fas fa-angle-left right"></i>
                             </p>
                         </a>
@@ -207,29 +199,28 @@
                             <li class="nav-item">
                                 <a href=" " class="nav-link">
                                     <i class="far fa-circle nav-icon"></i>
-                                    <p>Inbox</p>
+                                    <p>Inbox messages</p>
                                 </a>
                             </li>
                             <li class="nav-item">
                                 <a href="pages/mailbox/compose.html" class="nav-link">
                                     <i class="far fa-circle nav-icon"></i>
-                                    <p>Compose</p>
+                                    <p>Create a message</p>
                                 </a>
                             </li>
                             <li class="nav-item">
                                 <a href="pages/mailbox/read-mail.html" class="nav-link">
                                     <i class="far fa-circle nav-icon"></i>
-                                    <p>Read</p>
+                                    <p>Read message</p>
                                 </a>
                             </li>
                         </ul>
                     </li>
-                    <li class="nav-header">CHALLENGE OR OPINION</li>
                     <li class="nav-item has-treeview">
                         <a href="#" class="nav-link">
                             <i class="nav-icon fas fa-circle"></i>
                             <p>
-                                Categories
+                                Suggession
                                 <i class="right fas fa-angle-left"></i>
                             </p>
                         </a>
@@ -237,44 +228,30 @@
                             <li class="nav-item">
                                 <a href="#" class="nav-link">
                                     <i class="far fa-circle nav-icon"></i>
-                                    <p>Academic</p>
+                                    <p>Innovation</p>
                                 </a>
                             </li>
                             <li class="nav-item has-treeview">
                                 <a href="#" class="nav-link">
                                     <i class="far fa-circle nav-icon"></i>
                                     <p>
-                                        Immediate issue
-                                        <i class="right fas fa-angle-left"></i>
+                                        bussiness
+                                        
                                     </p>
                                 </a>
-                                <ul class="nav nav-treeview">
-                                    <li class="nav-item">
-                                        <a href="#" class="nav-link">
-                                            <i class="far fa-dot-circle nav-icon"></i>
-                                            <p>Personal issue</p>
-                                        </a>
-                                    </li>
-                                    <li class="nav-item">
-                                        <a href="#" class="nav-link">
-                                            <i class="far fa-dot-circle nav-icon"></i>
-                                            <p>Public issue</p>
-                                        </a>
-                                    </li>
-                                </ul>
+                                
                             </li>
-                            <li class="nav-item">
+                            <li class="nav-item has-treeview">
                                 <a href="#" class="nav-link">
                                     <i class="far fa-circle nav-icon"></i>
-                                    <p>Construction</p>
+                                    <p>
+                                        Project
+                                        
+                                    </p>
                                 </a>
+                                
                             </li>
-                            <li class="nav-item">
-                                <a href="#" class="nav-link">
-                                    <i class="far fa-circle nav-icon"></i>
-                                    <p>Food</p>
-                                </a>
-                            </li>
+                           
                         </ul>
 
                     <li class="nav-header">LOGOUT</li>
@@ -298,7 +275,8 @@
 
     <!-- Content Wrapper. Contains page content -->
     <div class="content-wrapper">
-        <!-- @yield('content') -->
+         @yield('content') 
+
     </div>
     <!-- /.content-wrapper -->
     <footer class="main-footer" style="position:fixed;">
@@ -312,16 +290,7 @@
     </aside>
     <!-- /.control-sidebar -->
 </div>
-<!-- ./wrapper -->
-<!-- <div class="wrapper middle">
-    <div class="wrapper-section">
-            <h1> Welcome to the Digital Suggestion Box</h1>
-            <p1>This is the web application with the purpose of help to improve the development of the 
-            University of Dar es salaam and among the student overall from within </p1>
-    </div>
-    <div class="div"></div>
-    <div class="div"></div>
- </div> -->
+
 <!-- jQuery -->
 <script src="{{ asset('plugins/jquery/jquery.min.js') }}"></script>
 <!-- jQuery UI 1.11.4 -->
