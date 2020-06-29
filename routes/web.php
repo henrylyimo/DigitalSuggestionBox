@@ -31,5 +31,5 @@ Route::get('/update',['uses' => 'PagesController@updatePage']);
 
 
 
-Route::get('/home', 'HomeController@home')->name('home');
+Route::get('/home', 'HomeController@index')->name('home');
 Route::get('/posts', 'PostsController@posts')->name('posts');
