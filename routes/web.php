@@ -12,7 +12,7 @@
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('auth.login');
 });
 
 
@@ -26,6 +26,8 @@ Route::get('/about',['uses' => 'PagesController@about']);
 Route::get('/homepage',['uses' => 'PagesController@homepage']);
 Route::get('/profilepage',['uses' => 'PagesController@profilepage']);
 Route::get('/update',['uses' => 'PagesController@updatePage']);
+Route::get('/challengeform',['uses' => 'PagesController@challengeform']);
+Route::get('/opinionform',['uses' => 'PagesController@opinionform']);
 
 
 

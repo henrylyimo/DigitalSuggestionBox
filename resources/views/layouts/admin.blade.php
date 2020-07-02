@@ -28,6 +28,7 @@
     <link rel="stylesheet" href="{{ asset('css/styles.css') }}">
     <!-- Google Font: Source Sans Pro -->
     <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700" rel="stylesheet">
+    {{-- css style --}}
     @yield('styles')
 </head>
 <body class="hold-transition sidebar-mini layout-fixed">
@@ -65,7 +66,7 @@
 
             
              
-            <!--<li class="nav-item">
+            <li class="nav-item">
             <div class="user-panel d-flex">
                 <div class="image">
                     <img src="{{ asset('/Logo/picture.jpg') }}" class="img-circle" >
@@ -75,7 +76,7 @@
                 </div>
                 
             </div>
-          </li> -->
+          </li> 
 
           <!-- Example single danger button -->
 
@@ -89,7 +90,7 @@
         <!-- Brand Logo -->
         <div class="navbar-brand pl-4">
           <div class="row">
-            <img src="{{ asset('/Logo/logoDashboard.jpg') }}" height="40px" alt="DigitalSuggessionBox" class="brand-image"> 
+            <img src="{{ asset('/image/logo.png') }}" height="40px" alt="" class="brand-image"> 
             
           </div>
         </div>
@@ -129,28 +130,58 @@
                         </a>
                     </li>
 
-                    <li class="nav-item">
-                      <a href="/about" class="nav-link">
-                          <i class="nav-icon far fa-align-left"></i>
-                          <p>
-                              About
-                          </p>
-                      </a>
-                  </li>
+                    
 
-                  <li class="nav-item">
-                    <a href="pages/calendar.html" class="nav-link">
-                        <i class="nav-icon far fa-calendar-alt"></i>
-                        <p>
-                            Calendar
-                        </p>
-                    </a>
-                </li>
+                  
                 <li class="nav-item has-treeview">
                     <a href=" " class="nav-link">
-                        <i class="nav-icon far fa-newspaper-0"></i>
+                        <i class="nav-icon far fa-calendar-alt"></i>
                         <p>
                             Challange 
+                            <i class="fas fa-angle-left right"></i>
+                        </p>
+                    </a>
+                    <ul class="nav nav-treeview">
+                        <li class="nav-item">
+                            <a href="/challengeform" class="nav-link">
+                                <i class="far fa-circle nav-icon"></i>
+                                <p>Academy</p>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="/challengeform"  class="nav-link">
+                                <i class="far fa-circle nav-icon"></i>
+                                <p>Security</p>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="/challengeform"  class="nav-link">
+                                <i class="far fa-circle nav-icon"></i>
+                                <p>Corruption</p>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="/challengeform"  class="nav-link">
+                                <i class="far fa-circle nav-icon"></i>
+                                <p>Cafeteria</p>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="/challengeform"  class="nav-link">
+                                <i class="far fa-circle nav-icon"></i>
+                                <p>Person Issue</p>
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+
+                <!---Secratary feedback---->
+
+                <li class="nav-item has-treeview">
+                    <a href=" " class="nav-link">
+                        <i class="nav-icon far fa-calendar-alt"></i>
+                        <p>
+                            Claimer
                             <i class="fas fa-angle-left right"></i>
                         </p>
                     </a>
@@ -162,31 +193,33 @@
                             </a>
                         </li>
                         <li class="nav-item">
-                            <a href="pages/mailbox/compose.html" class="nav-link">
+                            <a href="" class="nav-link">
                                 <i class="far fa-circle nav-icon"></i>
                                 <p>Security</p>
                             </a>
                         </li>
                         <li class="nav-item">
-                            <a href="pages/mailbox/read-mail.html" class="nav-link">
+                            <a href="" class="nav-link">
                                 <i class="far fa-circle nav-icon"></i>
                                 <p>Corruption</p>
                             </a>
                         </li>
                         <li class="nav-item">
-                            <a href="pages/mailbox/read-mail.html" class="nav-link">
+                            <a href="" class="nav-link">
                                 <i class="far fa-circle nav-icon"></i>
                                 <p>Cafeteria</p>
                             </a>
                         </li>
                         <li class="nav-item">
-                            <a href="pages/mailbox/read-mail.html" class="nav-link">
+                            <a href="" class="nav-link">
                                 <i class="far fa-circle nav-icon"></i>
                                 <p>Person Issue</p>
                             </a>
                         </li>
                     </ul>
                 </li>
+
+                <!----Message-->
                     <li class="nav-item has-treeview">
                         <a href=" " class="nav-link">
                             <i class="nav-icon far fa-envelope"></i>
@@ -216,33 +249,31 @@
                             </li>
                         </ul>
                     </li>
+
+                    <!---Suggestion---->
                     <li class="nav-item has-treeview">
                         <a href="#" class="nav-link">
                             <i class="nav-icon fas fa-circle"></i>
                             <p>
                                 Suggession
-                                <i class="right fas fa-angle-left"></i>
+                                <i class="fas fa-angle-left right"></i>
                             </p>
                         </a>
                         <ul class="nav nav-treeview">
                             <li class="nav-item">
-                                <a href="#" class="nav-link">
+                                <a href="/opinionform" class="nav-link">
                                     <i class="far fa-circle nav-icon"></i>
                                     <p>Innovation</p>
                                 </a>
                             </li>
                             <li class="nav-item has-treeview">
-                                <a href="#" class="nav-link">
+                                <a href="/opinionform" class="nav-link">
                                     <i class="far fa-circle nav-icon"></i>
-                                    <p>
-                                        bussiness
-                                        
-                                    </p>
-                                </a>
-                                
+                                    <p>bussiness</p>    
+                                </a>                               
                             </li>
                             <li class="nav-item has-treeview">
-                                <a href="#" class="nav-link">
+                                <a href="/opinionform" class="nav-link">
                                     <i class="far fa-circle nav-icon"></i>
                                     <p>
                                         Project
@@ -253,6 +284,51 @@
                             </li>
                            
                         </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a href="/about" class="nav-link">
+                            <i class="nav-icon far fa-"></i>
+                            <p>
+                                About
+                            </p>
+                        </a>
+                    </li>
+
+                    <li class="nav-item has-treeview">
+                        <a href="#" class="nav-link">
+                            <i class="nav-icon fas fa-circle"></i>
+                            <p>
+                                User
+                                <i class="right fas fa-angle-left"></i>
+                            </p>
+                        </a>
+                        <ul class="nav nav-treeview">
+                            <li class="nav-item">
+                                <a href="#" class="nav-link">
+                                    <i class="far fa-circle nav-icon"></i>
+                                    <p>Admin</p>
+                                </a>
+                            </li>
+                            <li class="nav-item has-treeview">
+                                <a href="#" class="nav-link">
+                                    <i class="far fa-circle nav-icon"></i>
+                                    <p>
+                                        Student                                       
+                                    </p>
+                                </a>                                
+                            </li>
+                            <li class="nav-item has-treeview">
+                                <a href="#" class="nav-link">
+                                    <i class="far fa-circle nav-icon"></i>
+                                    <p>
+                                        Secretary                                      
+                                    </p>
+                                </a>                               
+                            </li>
+                           
+                        </ul>
+                    </li>
+
 
                     <li class="nav-header">LOGOUT</li>
                     <li class="nav-link">

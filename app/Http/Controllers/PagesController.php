@@ -24,4 +24,10 @@ class PagesController extends Controller
     public function updatePage() {
         return view('pages.updatepage');
     }
+    public function challengeform() {
+        return view('pages.challengeform');
+    }
+    public function opinionform() {
+        return view('pages.opinionform');
+    }
 }

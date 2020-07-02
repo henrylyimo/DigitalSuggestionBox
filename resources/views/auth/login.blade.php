@@ -12,7 +12,8 @@
      {
          background-color: white;
          height: 80vh;
-         box-shadow: 2px;    
+         box-shadow: 2px; 
+         border-radius: 20px;   
      }
      .card-h2
      {

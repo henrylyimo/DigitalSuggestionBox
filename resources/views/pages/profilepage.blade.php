@@ -2,21 +2,21 @@
 
 @section('content')
 <style>
-.image {
-	height: 220px;
-	width: 220px;
+.image-profile {
+	height: 180px;
+	width: 180px;
 	background-color: blue;
 	position: relative;
 	border-radius: 50%
 }
 .image2 {
-	height: 200px;
-	width: 200px;
+	height: 150px;
+	width: 150px;
 	position: absolute;
 	border-radius: 180px;
 	background-color: blueviolet;
-margin-left: 10px;
-margin-top: 10px
+margin-left: 15px;
+margin-top: 15px
 }
 </style>;
 
@@ -30,7 +30,7 @@ margin-top: 10px
 							<div class="card-header bg-dark">
                   <div class="row">
 										<div class="col-lg-6">
-											<div class="image">
+											<div class="image-profile">
 												
 													<img src="{{ asset('/image/img-2.png') }}" alt="" class="img-fluid image2">
 										
@@ -111,13 +111,14 @@ margin-top: 10px
 
 									</div>
 								</div>
-	<div class="row">
-		<div class="col-lg-3 ml-auto mr-4 mb-3" >
-			<button class="btn btn-lg btn-primary">
-				Save Changes
-			</button>
-		</div>
-	</div>
+								  <div class="row">
+									<div class="col-lg-3 ml-auto mr-4 mb-3" >
+										<button class="btn btn-lg btn-primary">
+											Save Changes
+										 </button>
+									  </div>
+								  </div>
+	
 								</form>
 							</div>
 						</div>

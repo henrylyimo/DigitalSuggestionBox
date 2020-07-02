@@ -36,7 +36,10 @@
         <!-- Styles -->
         <style>
             html, body {
-               
+                background-image: linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)), url("/image/home.png");
+                background-attachment: fixed;
+                background-size: cover;
+                background-position: center;
                 color: black;
                 font-family: 'Nunito', sans-serif;
                 font-weight: 500;
@@ -128,10 +131,12 @@
             </div>
         </nav>
 
-            <div class="content text-center">
-                
-                <div class="title m-b-md">
-                   Udsm Digital Suggestion Box
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-6"></div>
+                    <div class="col-md-6">
+                        .
+                    </div>
                 </div>
             </div>
         
