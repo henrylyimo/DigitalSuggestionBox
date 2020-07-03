@@ -29,6 +29,11 @@
   background-color: transparent;
   border-bottom: 2px solid grey;
 }
+.fa-star
+{
+	color: red;
+	font-size: 5px
+}
 </style>
 
 @endsection
@@ -49,7 +54,9 @@
             <h1 class="font-weight-bold" >UNIVERSITY OF DAR ES SALAAM</h1>
             <h2 class="font-weight-200">Digital SuggestionBox</h2>
             <p class="font-size-30">All person detail remain  <span class="text-danger font-weight-bold" >CONFIDENTIAL</span> </p>
+            <p>Place showed by <i class="fas fa-star"></i>  must be filled</p>
             <P>Your opinion will be acknowledged wait for feedback</P>
+
           </div>
         </div>
         
@@ -58,32 +65,43 @@
     </section>
     <section class="cont pt-5 ">
        <div class="row ml-5 ">
+        <i class="fas fa-star"></i>
         <h6 class="display-12 ">Name:</h6>
-          <form action="">
-            <input type="text" class="inputform ml-5 " id="name" name="name" required >
+          <form action=""> 
+            <input type="text" class="inputform ml-5 " id="name" name="name" required >  
           </form>
-        <p ></p>
       </div>
       <div class="row ml-5 ">
         <h6 class="display-12 ">Reg no:</h6>
-          <form action="">
-            <input type="text" class="inputform ml-5" id="reg-no" name="Reg-no" required >
+          <form action="">            
+            <input type="text" class="inputform ml-5" id="reg-no" name="Reg-no" required >            
           </form>
-        <p ></p>
       </div>
+
       <div class="row ml-5 ">
         <h6 class="display-12 ">Course:</h6>
-          <form action="">
-            <input type="text" class="inputform ml-5" id="course" name="course" required >
+          <form action="">        
+            <input type="text" class="inputform ml-5" id="course" name="course" required >       
           </form>
-        <p ></p>
       </div>
       <div class="row ml-5 ">
+        <i class="fas fa-star"></i>
         <h6 class="display-12 ">Contact No:</h6>
           <form action="">
+           
             <input type="text" class="inputform ml-5" id="contact" name="course" required >
+            
           </form>
-        <p ></p>
+      </div>
+
+      <div class="row ml-5 ">
+        <i class="fas fa-star"></i>
+        <h6 class="display-12 ">Email:</h6>
+          <form action="">
+           
+            <input type="text" class="inputform ml-5" id="contact" name="course" required >
+            
+          </form>
       </div>
       <div class="form-group mr-5 pt-5 text-center ">
         <label for="exampleFormControlTextarea1">Please describe your opinion in detail:</label>

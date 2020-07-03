@@ -32,6 +32,7 @@ body {
   
   color: black;
   font-weight: bold;
+  padding-left: 30px;
 }
 .main-sidebar .nav-item:hover
 {
@@ -68,3 +69,4 @@ body {
   color: white;
  
 }
+

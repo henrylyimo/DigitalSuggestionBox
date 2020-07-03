@@ -73,7 +73,7 @@
                         <!--<div class="card-header">{{ __('Login') }}</div>-->
         
                         <div class="card-body">
-                            <h2 class="card-h2  mb-5"> Member Login</h2>
+                            <h2 class="card-h2  mb-5">Member Login</h2>
 
 
                             <form method="POST" action="{{ route('login') }}">

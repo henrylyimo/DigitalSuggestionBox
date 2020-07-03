@@ -5,25 +5,26 @@
 .image-profile {
 	height: 180px;
 	width: 180px;
-	background-color: blue;
+	background-color: whitesmoke;
 	position: relative;
 	border-radius: 50%
 }
 .image2 {
-	height: 150px;
-	width: 150px;
+	height: 170px;
+	width: 170px;
 	position: absolute;
 	border-radius: 180px;
 	background-color: blueviolet;
-margin-left: 15px;
-margin-top: 15px
+margin-left: 5px;
+margin-top: 5px
 }
-</style>;
+
+</style>
 
 </head>
-<title>ProfilePage</title>
+<title>Profile Form</title>
     <body>
-			<div class="container ">
+			<div class="container pt-4">
 				<div class="row ml-5">
 					<div class="col-xl-10 col-md-8">
 						<div class="card">
@@ -32,13 +33,13 @@ margin-top: 15px
 										<div class="col-lg-6">
 											<div class="image-profile">
 												
-													<img src="{{ asset('/image/img-2.png') }}" alt="" class="img-fluid image2">
+													<img src="{{ asset('/image/avatar.jpg') }}" alt="" class="img-fluid image2">
 										
 											</div>
 										</div>
 										<div class="col-lg-5 pt-5 pr-5">
 											<h4 class="display-5 ">
-													REGISTRATION FORM 
+													PROFILE FORM 
 											</h4>
 											<h5 class="display-5 text-muted">
 												Please fill In The Text Below

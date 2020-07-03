@@ -8,6 +8,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- Font Awesome -->
     <link rel="stylesheet" href="{{ asset('plugins/fontawesome-free/css/all.min.css') }}">
+    <link rel="stylesheet" href="file:///E:/Website/DigitalSuggestionBox/resources/Fontawesome/fontawesome.min.css">
+    <link rel="stylesheet" href="file:///E:/Website/DigitalSuggestionBox/resources/Fontawesome/all.min.css">
     <!-- Ionicons -->
     <link rel="stylesheet" href="https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
     <!-- Tempusdominus Bbootstrap 4 -->
@@ -42,7 +44,7 @@
     <!----Left navbar links--->
     <ul class="navbar-nav">
         <li class="nav-item">
-            <a href="#" class="nav-link" data-widget="pushmenu"><i class="fas fa-bars"></i></a>
+            <a href="#" class="nav-link" data-widget="pushmenu"><i class="fas fa-angle-left right"></i></a>
         </li>
     </ul>
      
@@ -53,7 +55,7 @@
             
         <form class="form-inline ml-auto">
           <div class="input-group input-group-sm ">
-              <input class="form-control form-control-navbar " type="search" placeholder="Search" aria-label="Search">
+              <input class="form-control form-control-navbar inputform" type="search" placeholder="Search" aria-label="Search">
               <div class="input-group-append">
                   <button class="btn btn-navbar  bg-white" type="submit">
                       <i class="fas fa-search"></i>
@@ -69,7 +71,8 @@
             <li class="nav-item">
             <div class="user-panel d-flex">
                 <div class="image">
-                    <img src="{{ asset('/Logo/picture.jpg') }}" class="img-circle" >
+                    <img src="{{ asset('/image/avatar.jpg') }}" class="img-circle">
+                    
                 </div>
                 <div class="info">
                     <a href=" " class="d-block" >{{ Auth::user()->name }}</a>
@@ -88,7 +91,7 @@
     <!-- Main Sidebar Container -->
     <aside class="main-sidebar  elevation-4 bg-dark ">
         <!-- Brand Logo -->
-        <div class="navbar-brand pl-4">
+        <div class="navbar-brand">
           <div class="row">
             <img src="{{ asset('/image/logo.png') }}" height="40px" alt="" class="brand-image"> 
             
@@ -115,7 +118,7 @@
                     </li>
                     <li class="nav-item">
                         <a href="/update" class="nav-link">
-                            <i class="nav-icon far fa-address-card"></i>
+                            <i class=" nav-icon far fa-newspaper"></i>
                             <p>
                                 Update
                             </p>
@@ -172,6 +175,12 @@
                                 <p>Person Issue</p>
                             </a>
                         </li>
+                        <li class="nav-item">
+                            <a href="/challengeform"  class="nav-link">
+                                <i class="far fa-circle nav-icon"></i>
+                                <p>Other</p>
+                            </a>
+                        </li>
                     </ul>
                 </li>
 
@@ -179,7 +188,7 @@
 
                 <li class="nav-item has-treeview">
                     <a href=" " class="nav-link">
-                        <i class="nav-icon far fa-calendar-alt"></i>
+                        <i class="nav-icon fas fa-align-center"></i>
                         <p>
                             Claimer
                             <i class="fas fa-angle-left right"></i>
@@ -216,44 +225,22 @@
                                 <p>Person Issue</p>
                             </a>
                         </li>
+                        <li class="nav-item">
+                            <a href="/challengeform"  class="nav-link">
+                                <i class="far fa-circle nav-icon"></i>
+                                <p>Other</p>
+                            </a>
+                        </li>
                     </ul>
                 </li>
 
                 <!----Message-->
-                    <li class="nav-item has-treeview">
-                        <a href=" " class="nav-link">
-                            <i class="nav-icon far fa-envelope"></i>
-                            <p>
-                                Message section
-                                <i class="fas fa-angle-left right"></i>
-                            </p>
-                        </a>
-                        <ul class="nav nav-treeview">
-                            <li class="nav-item">
-                                <a href=" " class="nav-link">
-                                    <i class="far fa-circle nav-icon"></i>
-                                    <p>Inbox messages</p>
-                                </a>
-                            </li>
-                            <li class="nav-item">
-                                <a href="pages/mailbox/compose.html" class="nav-link">
-                                    <i class="far fa-circle nav-icon"></i>
-                                    <p>Create a message</p>
-                                </a>
-                            </li>
-                            <li class="nav-item">
-                                <a href="pages/mailbox/read-mail.html" class="nav-link">
-                                    <i class="far fa-circle nav-icon"></i>
-                                    <p>Read message</p>
-                                </a>
-                            </li>
-                        </ul>
-                    </li>
+                   
 
                     <!---Suggestion---->
                     <li class="nav-item has-treeview">
                         <a href="#" class="nav-link">
-                            <i class="nav-icon fas fa-circle"></i>
+                            <i class="nav-icon fas fa-tasks"></i> 
                             <p>
                                 Suggession
                                 <i class="fas fa-angle-left right"></i>
@@ -286,8 +273,16 @@
                         </ul>
                     </li>
                     <li class="nav-item">
+                        <a href="/update" class="nav-link">
+                            <i class=" nav-icon far fa-envelope"></i>
+                            <p>
+                                Feedback
+                            </p>
+                        </a>
+                    </li>
+                    <li class="nav-item">
                         <a href="/about" class="nav-link">
-                            <i class="nav-icon far fa-"></i>
+                            <i class="nav-icon far fa-address-card"></i>
                             <p>
                                 About
                             </p>
@@ -296,7 +291,7 @@
 
                     <li class="nav-item has-treeview">
                         <a href="#" class="nav-link">
-                            <i class="nav-icon fas fa-circle"></i>
+                            <i class=" nav-icon fas fa-user-cog"></i>
                             <p>
                                 User
                                 <i class="right fas fa-angle-left"></i>
@@ -329,18 +324,26 @@
                         </ul>
                     </li>
 
-
-                    <li class="nav-header">LOGOUT</li>
+                    <li class="nav-item has-treeview">
+                        <a href="#" class="nav-link">
+                            <i class="nav-icon fas fa-sign-out-alt"></i> 
+                            <p>
+                                LOGOUT
+                            </p>
+                        </a>
+                        <ul class="nav nav-treeview">
                     <li class="nav-link">
-                        <a class="nav-icon far fa-circle text-info" href="{{ route('logout') }}"
+                        <a class="far fa-circle nav-icon" href="{{ route('logout') }}"
                            onclick="event.preventDefault();
                                                      document.getElementById('logout-form').submit();">
-                               {{ __('logout') }}
+                               {{ __('  Logout') }}
                         </a>
 
                         <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
                             @csrf
                         </form>
+                    </li>
+                        </ul>
                     </li>
                 </ul>
             </nav>
