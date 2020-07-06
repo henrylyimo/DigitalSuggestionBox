@@ -57,55 +57,51 @@
       
     </section>
     <section class="cont pt-5 ">
-       <div class="row ml-5 ">
+      <form action="postChallenges" method="POST" enctype="multipart/form-data">  
+        @csrf 
+            <div class="row ml-5 ">
         <h6 class="display-12 ">Name:</h6>
-          <form action="">
-            <input type="text" class="inputform ml-5 " >
-          </form>
+            <input type="text" name="name" class="inputform ml-5 " >
         <p >(Option)</p>
       </div>
       <div class="row ml-5 ">
         <h6 class="display-12 ">Reg no:</h6>
-          <form action="">
-            <input type="text" class="inputform ml-5 " >
-          </form>
+            <input type="text" name="regNo" class="inputform ml-5 " >
         <p >(Option)</p>
       </div>
       <div class="row ml-5 ">
         <h6 class="display-12 ">Course:</h6>
-          <form action="">
-            <input type="text" class="inputform ml-5 " >
-          </form>
+            <input type="text" name="course" class="inputform ml-5 " >
         <p >(Option)</p>
       </div>
       <div class="row ml-5 ">
         <h6 class="display-12 ">Contact No:</h6>
-          <form action="">
-            <input type="text" class="inputform ml-5 " >
-          </form>
+            <input type="text" name="contact" class="inputform ml-5 " >
         <p >(Option)</p>
       </div>
       <div class="form-group mr-5 pt-5 text-center ">
-        <label for="exampleFormControlTextarea1">Please describe in detail about your complain and provide or identify all known person and document to your concerns:</label>
-        <textarea class="form-control " id="" rows="10"></textarea>
+        <label for="complain">Please describe in detail about your complain and provide or identify all known person and document to your concerns:</label>
+        <textarea class="form-control" name="complain" id="" rows="10"></textarea>
       </div>
       <div class="form-group mr-5 text-center pt-5">
-        <label for="exampleFormControlSelect1">Please describe any positive solution you believe can help to solve your complaint</label>
-        <textarea class="form-control " id="" rows="5"></textarea>
+        <label for="solution">Please describe any positive solution you believe can help to solve your complaint</label>
+        <textarea class="form-control" name="solution" id="" rows="5"></textarea>
       </div>
 
-      <form>
+      
         <div class="form-group">
           <label for="exampleFormControlFile1">Upload evidence</label>
-          <input type="file" class="form-control-file" id="">
+          <input type="file" name="evidence" class="form-control-file" id="">
         </div>
-      </form>
+    
 
       <div class="row">
         <div class="mr-5 ml-auto mb-3" >
-          <a href="#" class="btn btn-primary active" role="button" aria-pressed="true">SUBMIT</a>
+          <button href="#" type="submit" class="btn btn-primary active" role="button" aria-pressed="true">SUBMIT</button>
         </div>
       </div>
+    </form>
+
     </section>
   </div>
 </body>

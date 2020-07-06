@@ -184,49 +184,49 @@
                     </ul>
                 </li>
 
-                <!---Secratary feedback---->
+                <!---Student Challenge---->
 
                 <li class="nav-item has-treeview">
-                    <a href=" " class="nav-link">
+                    <a href="/studentchallenge " class="nav-link">
                         <i class="nav-icon fas fa-align-center"></i>
                         <p>
-                            Claimer
+                            Students Challenges
                             <i class="fas fa-angle-left right"></i>
                         </p>
                     </a>
                     <ul class="nav nav-treeview">
                         <li class="nav-item">
-                            <a href=" " class="nav-link">
+                            <a href=" /getChallenges" class="nav-link">
                                 <i class="far fa-circle nav-icon"></i>
                                 <p>Academy</p>
                             </a>
                         </li>
                         <li class="nav-item">
-                            <a href="" class="nav-link">
+                            <a href="/studentchallenge" class="nav-link">
                                 <i class="far fa-circle nav-icon"></i>
                                 <p>Security</p>
                             </a>
                         </li>
                         <li class="nav-item">
-                            <a href="" class="nav-link">
+                            <a href="/studentchallenge" class="nav-link">
                                 <i class="far fa-circle nav-icon"></i>
                                 <p>Corruption</p>
                             </a>
                         </li>
                         <li class="nav-item">
-                            <a href="" class="nav-link">
+                            <a href="/studentchallenge" class="nav-link">
                                 <i class="far fa-circle nav-icon"></i>
                                 <p>Cafeteria</p>
                             </a>
                         </li>
                         <li class="nav-item">
-                            <a href="" class="nav-link">
+                            <a href="/studentchallenge" class="nav-link">
                                 <i class="far fa-circle nav-icon"></i>
                                 <p>Person Issue</p>
                             </a>
                         </li>
                         <li class="nav-item">
-                            <a href="/challengeform"  class="nav-link">
+                            <a href="/studentchallenge"  class="nav-link">
                                 <i class="far fa-circle nav-icon"></i>
                                 <p>Other</p>
                             </a>
@@ -271,7 +271,47 @@
                             </li>
                            
                         </ul>
+                        
                     </li>
+
+                    <!--- Students Suggestion---->
+                    <li class="nav-item has-treeview">
+                        <a href="#" class="nav-link">
+                            <i class="nav-icon fas fa-tasks"></i> 
+                            <p>
+                                Students Opinions
+                                <i class="fas fa-angle-left right"></i>
+                            </p>
+                        </a>
+                        <ul class="nav nav-treeview">
+                            <li class="nav-item">
+                                <a href="" class="nav-link">
+                                    <i class="far fa-circle nav-icon"></i>
+                                    <p>Innovation</p>
+                                </a>
+                            </li>
+                            <li class="nav-item has-treeview">
+                                <a href="" class="nav-link">
+                                    <i class="far fa-circle nav-icon"></i>
+                                    <p>bussiness</p>    
+                                </a>                               
+                            </li>
+                            <li class="nav-item has-treeview">
+                                <a href="" class="nav-link">
+                                    <i class="far fa-circle nav-icon"></i>
+                                    <p>
+                                        Project
+                                        
+                                    </p>
+                                </a>
+                                
+                            </li>
+                           
+                        </ul>
+                        
+                    </li>
+
+
                     <li class="nav-item">
                         <a href="/update" class="nav-link">
                             <i class=" nav-icon far fa-envelope"></i>

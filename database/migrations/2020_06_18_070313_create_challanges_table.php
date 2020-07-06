@@ -15,11 +15,15 @@ class CreateChallangesTable extends Migration
     {
         Schema::create('challanges', function (Blueprint $table) {
             $table->bigIncrements('id');
-            
-            $table->string('description');
-            $table->bigInteger('challange_type_id');
-            $table->string('status');
-
+            $table->string('name');
+            $table->string('reg_no');
+            $table->string('course');
+            $table->integer('contact_no');
+            $table->bigInteger('challange_type_id')->nullable();
+            $table->string('complain');
+            $table->string('c_solution');
+            $table->string('evidence');
+            $table->string('status')->nullable();
             $table->softdeletes();
             $table->timestamps();
         });

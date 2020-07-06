@@ -5,11 +5,11 @@ namespace App;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\SoftDeletes;
 
-class Challange extends Model
+class Challenge extends Model
 {
   use SoftDeletes;
 
-  protected $table = 'challenges';
+  protected $table = 'challanges';
 
   protected $primarykey = 'id';
 

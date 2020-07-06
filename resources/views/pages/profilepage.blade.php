@@ -39,7 +39,7 @@ margin-top: 5px
 										</div>
 										<div class="col-lg-5 pt-5 pr-5">
 											<h4 class="display-5 ">
-													PROFILE FORM 
+													MY PROFILEp
 											</h4>
 											<h5 class="display-5 text-muted">
 												Please fill In The Text Below

@@ -28,7 +28,12 @@ Route::get('/profilepage',['uses' => 'PagesController@profilepage']);
 Route::get('/update',['uses' => 'PagesController@updatePage']);
 Route::get('/challengeform',['uses' => 'PagesController@challengeform']);
 Route::get('/opinionform',['uses' => 'PagesController@opinionform']);
+// Route::get('/studentchallenge',['uses' => 'PagesController@studentchallenge']);
 
+
+//challenge 
+Route::get('/getChallenges',['uses' => 'ChallengeController@getChallenges']);
+Route::post('/postChallenges',['uses' => 'ChallengeController@postChallenges']);
 
 
 
