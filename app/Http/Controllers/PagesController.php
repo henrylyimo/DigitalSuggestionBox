@@ -27,8 +27,8 @@ class PagesController extends Controller
     public function challengeform() {
         return view('pages.challengeform');
     }
-    public function opinionform() {
-        return view('pages.opinionform');
+    public function opinion_form() {
+        return view('pages.opinion_form');
     }
     public function studentchallenge() {
         return view('pages.studentchallenge');

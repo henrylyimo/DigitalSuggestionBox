@@ -19,8 +19,8 @@ class ChallengeController extends Controller
         $validator = Validator::make($request->all(),[
             'challange_type_id' => 'required',
             'status'   => 'required',
-            'name'  => 'required',
-            'reg_no'  => 'required',
+            'college'  => 'required',
+            'email'  => 'required',
             'contact_no'  => 'required',
             'course'  => 'required',
             'complain'  => 'required',
@@ -30,8 +30,8 @@ class ChallengeController extends Controller
         ]);
 
         $challange = new Challenge;
-        $challange->name = $request->input('name');
-        $challange->reg_no = $request->input('regNo');
+        $challange->college = $request->input('college');
+        $challange->email = $request->input('email');
         $challange->course = $request->input('course');
         $challange->contact_no = $request->input('contact');
         $challange->complain = $request->input('complain');

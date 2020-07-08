@@ -52,8 +52,8 @@
                   </a>
                 
                   <div class="dropdown-menu " aria-labelledby="dropdownMenuLink">
-                  <a class="dropdown-item" href="#">{{ $challenge->name }}</a>
-                    <a class="dropdown-item" href="#">{{ $challenge->reg_no }}</a>
+                  <a class="dropdown-item" href="#">{{ $challenge->college }}</a>
+                    <a class="dropdown-item" href="#">{{ $challenge->email }}</a>
                     <a class="dropdown-item" href="#">{{ $challenge->course }}</a>
                     <a class="dropdown-item" href="#">{{ $challenge->contact_no }}</a>
                   </div>

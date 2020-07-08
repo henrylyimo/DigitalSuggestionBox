@@ -248,19 +248,19 @@
                         </a>
                         <ul class="nav nav-treeview">
                             <li class="nav-item">
-                                <a href="/opinionform" class="nav-link">
+                                <a href="/opinion_form" class="nav-link">
                                     <i class="far fa-circle nav-icon"></i>
                                     <p>Innovation</p>
                                 </a>
                             </li>
                             <li class="nav-item has-treeview">
-                                <a href="/opinionform" class="nav-link">
+                                <a href="/opinion_form" class="nav-link">
                                     <i class="far fa-circle nav-icon"></i>
                                     <p>bussiness</p>    
                                 </a>                               
                             </li>
                             <li class="nav-item has-treeview">
-                                <a href="/opinionform" class="nav-link">
+                                <a href="/opinion_form" class="nav-link">
                                     <i class="far fa-circle nav-icon"></i>
                                     <p>
                                         Project
@@ -320,6 +320,16 @@
                             </p>
                         </a>
                     </li>
+
+                    <li class="nav-item">
+                        <a href="/create_update" class="nav-link">
+                            <i class=" nav-icon far fa-newspaper"></i>
+                            <p>
+                                Create News
+                            </p>
+                        </a>
+                    </li>
+
                     <li class="nav-item">
                         <a href="/about" class="nav-link">
                             <i class="nav-icon far fa-address-card"></i>

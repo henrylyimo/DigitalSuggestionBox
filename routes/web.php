@@ -27,7 +27,7 @@ Route::get('/homepage',['uses' => 'PagesController@homepage']);
 Route::get('/profilepage',['uses' => 'PagesController@profilepage']);
 Route::get('/update',['uses' => 'PagesController@updatePage']);
 Route::get('/challengeform',['uses' => 'PagesController@challengeform']);
-Route::get('/opinionform',['uses' => 'PagesController@opinionform']);
+Route::get('/opinion_form',['uses' => 'PagesController@opinion_form']);
 // Route::get('/studentchallenge',['uses' => 'PagesController@studentchallenge']);
 
 

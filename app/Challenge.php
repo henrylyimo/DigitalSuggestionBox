@@ -16,8 +16,8 @@ class Challenge extends Model
   protected $fillable = [
     'challange_type_id',
     'status',
-    'name',
-    'reg_no',
+    'college',
+    'email',
     'contact_no',
     'course',
     'complain',
