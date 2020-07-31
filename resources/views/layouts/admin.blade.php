@@ -3,7 +3,7 @@
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Admin | Dashboard</title>
+    <title>Suggestion Box | Dashboard</title>
     <!-- Tell the browser to be responsive to screen width -->
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- Font Awesome -->
@@ -53,7 +53,7 @@
         <ul class="navbar-nav ml-auto">
           <li class="nav-tem">
             
-        <form class="form-inline ml-auto">
+        {{-- <form class="form-inline ml-auto">
           <div class="input-group input-group-sm ">
               <input class="form-control form-control-navbar inputform" type="search" placeholder="Search" aria-label="Search">
               <div class="input-group-append">
@@ -61,7 +61,7 @@
                       <i class="fas fa-search"></i>
                   </button>
               </div>
-          </div>
+          </div> --}}
       </form>
           </li>
             <!-- Messages Dropdown Menu -->
@@ -108,6 +108,8 @@
                 <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
                     <!-- Add icons to the links using the .nav-icon class
                          with font-awesome or any other icon font library -->
+
+                         
                     <li class="nav-item has-treeview menu-open ">
                         <a href="/homepage" class="nav-link ">
                             <i class="nav-icon fas fa-home"></i>
@@ -116,6 +118,9 @@
                             </p>
                         </a>
                     </li>
+                  
+
+                    
                     <li class="nav-item">
                         <a href="/update" class="nav-link">
                             <i class=" nav-icon far fa-newspaper"></i>
@@ -124,6 +129,7 @@
                             </p>
                         </a>
                     </li>
+
                     <li class="nav-item">
                         <a href="/profilepage" class="nav-link">
                             <i class="nav-icon far fa-user"></i>
@@ -133,148 +139,89 @@
                         </a>
                     </li>
 
-                    
-
                   
-                <li class="nav-item has-treeview">
-                    <a href=" " class="nav-link">
-                        <i class="nav-icon far fa-calendar-alt"></i>
-                        <p>
-                            Challange 
-                            <i class="fas fa-angle-left right"></i>
-                        </p>
-                    </a>
-                    <ul class="nav nav-treeview">
-                        <li class="nav-item">
-                            <a href="/challengeform" class="nav-link">
-                                <i class="far fa-circle nav-icon"></i>
-                                <p>Academy</p>
-                            </a>
-                        </li>
-                        <li class="nav-item">
-                            <a href="/challengeform"  class="nav-link">
-                                <i class="far fa-circle nav-icon"></i>
-                                <p>Security</p>
-                            </a>
-                        </li>
-                        <li class="nav-item">
-                            <a href="/challengeform"  class="nav-link">
-                                <i class="far fa-circle nav-icon"></i>
-                                <p>Corruption</p>
-                            </a>
-                        </li>
-                        <li class="nav-item">
-                            <a href="/challengeform"  class="nav-link">
-                                <i class="far fa-circle nav-icon"></i>
-                                <p>Cafeteria</p>
-                            </a>
-                        </li>
-                        <li class="nav-item">
-                            <a href="/challengeform"  class="nav-link">
-                                <i class="far fa-circle nav-icon"></i>
-                                <p>Person Issue</p>
-                            </a>
-                        </li>
-                        <li class="nav-item">
-                            <a href="/challengeform"  class="nav-link">
-                                <i class="far fa-circle nav-icon"></i>
-                                <p>Other</p>
-                            </a>
-                        </li>
-                    </ul>
-                </li>
+                    <li class="nav-item">
+                        <a href="/complaint_form" class="nav-link">
+                            <i class="nav-icon fas fa-align-center"></i>
+                            <p>
+                                Complaint Form
+                            </p>
+                        </a>
+                    </li>
 
                 <!---Student Challenge---->
-
                 <li class="nav-item has-treeview">
-                    <a href="/studentchallenge " class="nav-link">
+                    <a href="#" class="nav-link">
                         <i class="nav-icon fas fa-align-center"></i>
                         <p>
                             Students Challenges
                             <i class="fas fa-angle-left right"></i>
                         </p>
                     </a>
-                    <ul class="nav nav-treeview">
+                    <ul class="nav nav-treeview ml-4">
                         <li class="nav-item">
-                            <a href=" /getChallenges" class="nav-link">
-                                <i class="far fa-circle nav-icon"></i>
+                            <a href="/student_challange" class="nav-link">
+                                <i class="far fa-comment nav-icon"></i>
                                 <p>Academy</p>
                             </a>
                         </li>
                         <li class="nav-item">
-                            <a href="/studentchallenge" class="nav-link">
-                                <i class="far fa-circle nav-icon"></i>
-                                <p>Security</p>
-                            </a>
-                        </li>
-                        <li class="nav-item">
-                            <a href="/studentchallenge" class="nav-link">
-                                <i class="far fa-circle nav-icon"></i>
+                            <a href="" class="nav-link">
+                                <i class="far fa-comment nav-icon"></i>
                                 <p>Corruption</p>
                             </a>
-                        </li>
+                        </li>                      
                         <li class="nav-item">
-                            <a href="/studentchallenge" class="nav-link">
-                                <i class="far fa-circle nav-icon"></i>
-                                <p>Cafeteria</p>
+                            <a href="/student_challange " class="nav-link">
+                                <i class="far fa-comment nav-icon"></i>
+                                <p>Discrimination</p>
                             </a>
                         </li>
                         <li class="nav-item">
-                            <a href="/studentchallenge" class="nav-link">
-                                <i class="far fa-circle nav-icon"></i>
+                            <a href="/student_challange " class="nav-link">
+                                <i class="far fa-comment nav-icon"></i>
+                                <p>Harassment</p>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="/student_challange " class="nav-link">
+                                <i class="far fa-comment nav-icon"></i>
+                                <p>Unfair conduct</p>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="/student_challange" class="nav-link">
+                                <i class="far fa-comment nav-icon"></i>
+                                <p>Profossinal Issue</p>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="/student_challange" class="nav-link">
+                                <i class="far fa-comment nav-icon"></i>
                                 <p>Person Issue</p>
                             </a>
                         </li>
                         <li class="nav-item">
-                            <a href="/studentchallenge"  class="nav-link">
-                                <i class="far fa-circle nav-icon"></i>
+                            <a href="/student_challange"  class="nav-link">
+                                <i class="far fa-comment nav-icon"></i>
                                 <p>Other</p>
                             </a>
                         </li>
                     </ul>
                 </li>
 
-                <!----Message-->
-                   
-
-                    <!---Suggestion---->
-                    <li class="nav-item has-treeview">
-                        <a href="#" class="nav-link">
-                            <i class="nav-icon fas fa-tasks"></i> 
+                    <li class="nav-item">
+                        <a href="/opinion_form" class="nav-link">
+                            <i class="nav-icon fas fa-tasks"></i>
                             <p>
-                                Suggession
-                                <i class="fas fa-angle-left right"></i>
+                                Opinion Form
                             </p>
                         </a>
-                        <ul class="nav nav-treeview">
-                            <li class="nav-item">
-                                <a href="/opinion_form" class="nav-link">
-                                    <i class="far fa-circle nav-icon"></i>
-                                    <p>Innovation</p>
-                                </a>
-                            </li>
-                            <li class="nav-item has-treeview">
-                                <a href="/opinion_form" class="nav-link">
-                                    <i class="far fa-circle nav-icon"></i>
-                                    <p>bussiness</p>    
-                                </a>                               
-                            </li>
-                            <li class="nav-item has-treeview">
-                                <a href="/opinion_form" class="nav-link">
-                                    <i class="far fa-circle nav-icon"></i>
-                                    <p>
-                                        Project
-                                        
-                                    </p>
-                                </a>
-                                
-                            </li>
-                           
-                        </ul>
-                        
                     </li>
 
-                    <!--- Students Suggestion---->
+
+                    <!--- Students Opinion---->
+
                     <li class="nav-item has-treeview">
                         <a href="#" class="nav-link">
                             <i class="nav-icon fas fa-tasks"></i> 
@@ -283,34 +230,20 @@
                                 <i class="fas fa-angle-left right"></i>
                             </p>
                         </a>
-                        <ul class="nav nav-treeview">
+                        <ul class="nav nav-treeview ml-4">
+                            @foreach ($opinionTypes as $opinionType)
                             <li class="nav-item">
-                                <a href="" class="nav-link">
+                            <a href="/student_opinion/{{ $opinionType->id }}" class="nav-link">
                                     <i class="far fa-circle nav-icon"></i>
-                                    <p>Innovation</p>
+                                <p>{{ $opinionType->category }}</p>
                                 </a>
                             </li>
-                            <li class="nav-item has-treeview">
-                                <a href="" class="nav-link">
-                                    <i class="far fa-circle nav-icon"></i>
-                                    <p>bussiness</p>    
-                                </a>                               
-                            </li>
-                            <li class="nav-item has-treeview">
-                                <a href="" class="nav-link">
-                                    <i class="far fa-circle nav-icon"></i>
-                                    <p>
-                                        Project
-                                        
-                                    </p>
-                                </a>
-                                
-                            </li>
-                           
+                            @endforeach
+                         
+                            
                         </ul>
                         
                     </li>
-
 
                     <li class="nav-item">
                         <a href="/update" class="nav-link">
@@ -321,6 +254,9 @@
                         </a>
                     </li>
 
+
+
+                   
                     <li class="nav-item">
                         <a href="/create_update" class="nav-link">
                             <i class=" nav-icon far fa-newspaper"></i>
@@ -329,6 +265,7 @@
                             </p>
                         </a>
                     </li>
+                   
 
                     <li class="nav-item">
                         <a href="/about" class="nav-link">
@@ -339,6 +276,7 @@
                         </a>
                     </li>
 
+                    @role('Students')
                     <li class="nav-item has-treeview">
                         <a href="#" class="nav-link">
                             <i class=" nav-icon fas fa-user-cog"></i>
@@ -373,6 +311,7 @@
                            
                         </ul>
                     </li>
+                    @endrole
 
                     <li class="nav-item has-treeview">
                         <a href="#" class="nav-link">
@@ -448,11 +387,15 @@
 <script src="{{ asset('plugins/summernote/summernote-bs4.min.js') }}"></script>
 <!-- overlayScrollbars -->
 <script src="{{ asset('plugins/overlayScrollbars/js/jquery.overlayScrollbars.min.js') }}"></script>
-<!-- AdminLTE App -->
+<!-- Suggestion App -->
 <script src="{{ asset('dist/js/adminlte.js') }}"></script>
-<!-- AdminLTE dashboard demo (This is only for demo purposes) -->
+
 <script src="{{ asset('dist/js/pages/dashboard.js') }}"></script>
-<!-- AdminLTE for demo purposes -->
+
 <script src="{{ asset('dist/js/demo.js') }}"></script>
+
+<script src="https://cdn.ckeditor.com/4.14.1/standard/ckeditor.js"></script>
+
+@yield('scripts')
 </body>
 </html>

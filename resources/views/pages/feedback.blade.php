@@ -1,28 +1,9 @@
 @extends('layouts.admin')
 
 @section('content')
-{{-- <style>
-  .box
-  {
-    background-color: black;
-    height: 3px;
-    width: 140px;
-    margin-left: 67vh;
-    
-  }
-  .box1
-  {
-    background-color: black;
-    height: 5px;
-    width: 50px;
-    margin-left:74vh;  
-  }
-  
-</style> --}}
 
 <body>
 <div class="container">
-   <h1 class="text-center font-weight-bold pt-4">News and Updates</h1>
    <div class="container pt-5">
     <div class="card">
       <div class="card-body">

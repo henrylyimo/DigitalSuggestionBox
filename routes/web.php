@@ -26,15 +26,18 @@ Route::get('/about',['uses' => 'PagesController@about']);
 Route::get('/homepage',['uses' => 'PagesController@homepage']);
 Route::get('/profilepage',['uses' => 'PagesController@profilepage']);
 Route::get('/update',['uses' => 'PagesController@updatePage']);
-Route::get('/challengeform',['uses' => 'PagesController@challengeform']);
+Route::get('/complaint_form',['uses' => 'PagesController@complaint_form']);
 Route::get('/opinion_form',['uses' => 'PagesController@opinion_form']);
-// Route::get('/studentchallenge',['uses' => 'PagesController@studentchallenge']);
+Route::get('/student_opinion/{id}',['uses' => 'OpinionController@getInnovation']);
+Route::get('/student_challange',['uses' => 'PagesController@student_challange']);
 
 
 //challenge 
-Route::get('/getChallenges',['uses' => 'ChallengeController@getChallenges']);
-Route::post('/postChallenges',['uses' => 'ChallengeController@postChallenges']);
+// Route::get('/getChallenges',['uses' => 'ChallengeController@getChallenges']);
+// Route::post('/postChallenges',['uses' => 'ChallengeController@postChallenges']);
 
+//opinion
+Route::post('/postOpinion',['uses' => 'OPinionController@postOpinion']);
 
 
 

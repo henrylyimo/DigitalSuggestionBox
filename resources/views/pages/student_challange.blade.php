@@ -26,21 +26,21 @@
 
 @section('content')
 <body>
-  @if(count($challenges) > 0)
+  {{-- @if(count($challenges) > 0) --}}
   <div class="container">
-    @foreach ($challenges as $challenge)
+    {{-- @foreach ($challenges as $challenge) --}}
     <div class="container pt-5">
       <div class="card m-3 mb-5 mt-5">
         <div class="card-body">
               
           <div class="box">
             <h4 class="text-center font-weight-bold">Complaint</h4>
-          <p>{{ $challenge->complain }}</p>
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni dolorem a numquam illo et ipsam fugiat, iste accusantium corrupti repellendus dolorum ex quod ea quos voluptate, asperiores suscipit ipsa aperiam?</p>
           </div>
           <br>
           <div class="box">
             <h4 class="text-center font-weight-bold">Suggested Solution</h4>
-          <p>{{ $challenge->c_solution }}</p>
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus nihil dolorum expedita dicta voluptas, sequi a voluptatum consequuntur ex debitis.</p>
           </div>
           <br>
           <div class="row">
@@ -48,14 +48,11 @@
               <div class="row">
                 <div class="dropdown show">
                   <a class="btn btn-transparent dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                    Person Detail                 
+                    Contact                
                   </a>
                 
                   <div class="dropdown-menu " aria-labelledby="dropdownMenuLink">
-                  <a class="dropdown-item" href="#">{{ $challenge->college }}</a>
-                    <a class="dropdown-item" href="#">{{ $challenge->email }}</a>
-                    <a class="dropdown-item" href="#">{{ $challenge->course }}</a>
-                    <a class="dropdown-item" href="#">{{ $challenge->contact_no }}</a>
+                  <a class="dropdown-item" href="#">0785130009</a>
                   </div>
                 </div>
                 <div><a href="#" class="btn btn-transparent">Evidence</a></div>               
@@ -73,10 +70,21 @@
       </div>
       
     </div>
-    @endforeach
-    @else 
-    <p>NO complains found</p>
-    @endif
+    {{-- @endforeach --}}
+    {{-- @else 
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-3"></div>
+           <div class="card col-lg-6 mt-5 bg-transparent">
+              <div class="card-body">
+                 <p class="text-center font-weight-bold font-size-40">NO COMPLAINT</p>
+              </div>
+           </div>
+      <div class="col-lg-3"></div>
+      </div>
+      
+    </div> --}}
+    {{-- @endif --}}
   
   </div>
   {{-- reply modal --}}
@@ -90,8 +98,12 @@
           </button>
         </div>
         <div class="modal-body">
-          Lorem, ipsum dolor sit amet consectetur adipisicing elit. At quaerat sit, veritatis accusantium iusto nulla.
-
+          <form action="">
+            <div class="form-group">
+              <label for=""></label>
+              <textarea class="form-control" name="reply" id="" cols="30" rows="10"></textarea>
+            </div>
+          </form>
         </div>
         <div class="modal-footer">
           <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>

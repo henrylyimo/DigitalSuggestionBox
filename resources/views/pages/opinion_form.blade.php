@@ -40,107 +40,78 @@
 
 @section('content')
 <body>
-  <div class="card">
-    <div class="card-body">
-      <section class="header">
-        <div class="row col-lg-11">
-          <div class="col-lg-1"></div>
-          <div class="col-lg-3">
-            <div class="img-box ">
-              <img src="{{ asset('/image/logo.png') }}" height="200px" alt="" class="header-img">
-            </div>         
-          </div>
-          <div class="col-lg-7">
-            <div class="header-box text-center mt-2 ">
-              <h1 class="font-weight-bold" >UNIVERSITY OF DAR ES SALAAM</h1>
-              <h2 class="font-weight-200">STUDENTS SUGGESTION FORM</h2>
-              <p class="font-size-30">All person detail remain  <span class="text-danger font-weight-bold" >CONFIDENTIAL</span> place showed by <i class="fas fa-star"></i>  must be filled   </p>
-              <P>Your suggestion will be acknowledged wait for feedback</P>
+  <div class="container">
+    <div class="card">
+      <div class="card-body">
+        <section class="header">
+          <div class="row col-lg-11">
+            <div class="col-lg-1"></div>
+            <div class="col-lg-3">
+              <div class="img-box ">
+                <img src="{{ asset('/image/logo.png') }}" height="200px" alt="" class="header-img">
+              </div>         
             </div>
+            <div class="col-lg-7">
+              <div class="header-box text-center mt-2 ">
+                <h1 class="font-weight-bold" >UNIVERSITY OF DAR ES SALAAM</h1>
+                <h2 class="font-weight-200">OPINION FORM</h2>
+                <p class="font-size-30">All person detail remain  <span class="text-danger font-weight-bold" >CONFIDENTIAL</span>  </p>
+                <P>Your suggestion will be acknowledged wait for feedback</P>
+              </div>
+            </div>
+            
           </div>
           
-        </div>
-        
-      </section>
-      <section class="cont pt-5 ">
-        <form action="postChallenges" method="POST" enctype="multipart/form-data">  
-          @csrf 
-          <div class="row pl-3">
-            <div class="col-lg-5">
-              <div class="form-group">
-                <label for="name"><i class="fas fa-star"></i>Name:</label>
-              <input type="text" class="form-control" name="name" placeholder="">
+        </section>
+        <section class="cont pt-5 ">
+          <form action="postOpinion" method="POST" enctype="multipart/form-data">  
+            @csrf  
+            <div class="row pl-3">
+              <div class="col-md-5">
+                <div class="input-group mb-3">
+                  <select class="custom-select" name="category" id="inputGroupSelect01" required>
+                    <option selected>Nature of Opinion</option>
+                    @foreach ($opinionTypes as $opinionType)
+                  <option value="{{$opinionType->id }}">{{ $opinionType->category }}</option>
+                    @endforeach
+                  
+                  </select>
+                </div>
               </div>
-            </div>
-
-            <div class="col-lg-5">
-              <div class="form-group">
-                <label for="name"><i class="fas fa-star"></i>Reg No:</label>
-              <input type="text" class="form-control" name="regNo" placeholder="">
-              </div>
-            </div>
-          </div>
-    
-          <div class="row pl-3">
-            <div class="col-lg-5">
-              <div class="form-group">
-                <label for="name"><i class="fas fa-star"></i>Course:</label>
-              <input type="text" class="form-control" name="course" placeholder="">
-              </div>
-            </div>
-
-            <div class="col-lg-5">
-              <div class="form-group">
-                <label for="name"><i class="fas fa-star"></i>Contact_No:</label>
-              <input type="text" class="form-control" name="contact" placeholder="">
-              </div>
-            </div>
-          </div>
-
-          <div class="row pl-3">
-            <div class="col-lg-5">
-              <div class="form-group">
-                <label for="name"><i class="fas fa-star"></i>Email:</label>
-              <input type="email" class="form-control" name="Email" placeholder="">
-              </div>
-            </div>
-
-            <div class="col-lg-5">
-            </div>
-          </div>
-            
-          <div class="row">
-            <div class="col-lg-11">
-              <div class="form-group mr-5 pt-5 text-center ">
-                <label for="complain"><i class="fas fa-star"></i>Please describe in detail about your suggestion</label>
-                <textarea class="form-control" name="complain" id=""   rows="10"></textarea>
-              </div>
-
+  
+              <div class="col-md-5">
                 <div class="form-group">
-                  <label for="">Attach document for more explaination</label>
-                  <input type="file" name="evidence" class="form-control-file" id="">
+                <input type="text" class="form-control" name="contact" value="{{ $opinionType->contact }}" placeholder="eg +255 765 63 173" required>
                 </div>
-
-                <div class="row">
-                  <div class="mr-5 ml-auto mb-3" >
-                    <button href="#" type="submit" class="btn btn-primary active" role="button" aria-pressed="true">SUBMIT</button>
-                  </div>
-                </div>
+              </div>
             </div>
-          </div>
-
-        
-      
+              
+            <div class="row">
+              <div class="col-lg-11">
+                <div class="form-group mr-5 pt-5 text-center ">
+                  <label for="">Please describe in detail about your suggestion</label>
+                <textarea required class="form-control" name="opinion" rows="10" >{{ $opinionType->body }} </textarea>
+                </div>
   
-        
-      </form>
-  
-      </section>
-    </div>
-  </div>  
-</body>
-
-
-
+                  <div class="row">
+                    <div class="mr-5 ml-auto mb-3" >
+                      <button  type="submit" class="btn btn-primary" >SUBMIT</button>
+                    </div>
+                  </div>
+              </div>
+            </div>  
+        </form>
     
+        </section>
+      </div>
+    </div>  
+
+  </div>
+  
+</body>   
+@endsection
+@section('scripts')
+    {{-- <script>
+      CKEDITOR.replace( 'opinion' );
+    </script> --}}
 @endsection

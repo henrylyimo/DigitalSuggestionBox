@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateSuggetionsTable extends Migration
+class CreateOpinionsTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,14 +13,11 @@ class CreateSuggetionsTable extends Migration
      */
     public function up()
     {
-        Schema::create('suggestions', function (Blueprint $table) {
+        Schema::create('opinions', function (Blueprint $table) {
             $table->bigIncrements('id');
-
-            $table->string('description');
-            $table->bigInteger('suggestion_type_id');
-            $table->bigInteger('user_id');
-            $table->string('status');
-
+            $table->String('opinion_type_id');
+            $table->String('contact_no');
+            $table->Text('body');
             $table->softdeletes();
             $table->timestamps();
         });
@@ -33,6 +30,6 @@ class CreateSuggetionsTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('suggestions');
+        Schema::dropIfExists('opinions');
     }
 }

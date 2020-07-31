@@ -6,11 +6,11 @@ use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\SoftDeletes;
 
 
-class Challange extends Model
+class Opinion extends Model
 {
     use SoftDeletes;
 
-    protected $fillable = ['challange_type_id','contact_no','complaint, solution, evidence'];
+    protected $fillable = ['opinion_type_id','contact_no','body'];
     protected $dates = ['deleted_at'];
   
     //relations...
@@ -19,7 +19,7 @@ class Challange extends Model
         return $this->hasOne(Message::class);
     }
   
-    public function challangeType(){
-        return $this->belongsTo(ChallangeType::class);
+    public function opinionType(){
+        return $this->belongsTo(OpinionType::class);
     }
 }

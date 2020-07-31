@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateChallangeTypesTable extends Migration
+class CreateOpinionTypesTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,11 +13,12 @@ class CreateChallangeTypesTable extends Migration
      */
     public function up()
     {
-        Schema::create('challange_types', function (Blueprint $table) {
+        Schema::create('opinion_types', function (Blueprint $table) {
             $table->bigIncrements('id');
-            $table->string('name');
+            $table->String('category');
             $table->softdeletes();
             $table->timestamps();
+        
         });
     }
 
@@ -28,6 +29,6 @@ class CreateChallangeTypesTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('challange_types');
+        Schema::dropIfExists('opinion_types');
     }
 }

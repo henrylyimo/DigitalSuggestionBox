@@ -5,16 +5,18 @@ namespace App;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\SoftDeletes;
 
-class ChallangeType extends Model
+
+class OpinionType extends Model
 {
+    
     use SoftDeletes;
 
-    protected $table = 'challange_type';
+    protected $table = 'opinion_types';
 
     protected $fillable = ['category'];
     protected $dates = ['deleted_at'];
 
-    public function challanges(){
-        return $this->hasMany(challange::class);
+    public function opinions(){
+        return $this->hasMany(Opinion::class);
     }
 }

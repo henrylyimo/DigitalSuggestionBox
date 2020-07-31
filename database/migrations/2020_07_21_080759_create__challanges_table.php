@@ -13,17 +13,13 @@ class CreateChallangesTable extends Migration
      */
     public function up()
     {
-        Schema::create('challanges', function (Blueprint $table) {
+        Schema::create('challange', function (Blueprint $table) {
             $table->bigIncrements('id');
-            $table->string('college');
-            $table->string('email');
-            $table->string('course');
-            $table->integer('contact_no');
-            $table->bigInteger('challange_type_id')->nullable();
-            $table->string('complain');
-            $table->string('c_solution');
-            $table->string('evidence');
-            $table->string('status')->nullable();
+            $table->String('challange_type_id');
+            $table->String('contact_no');
+            $table->Text('complaint');
+            $table->Text('solution');
+            $table->String('evidence');
             $table->softdeletes();
             $table->timestamps();
         });
@@ -36,6 +32,6 @@ class CreateChallangesTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('challanges');
+        Schema::dropIfExists('_challanges');
     }
 }
