@@ -8,8 +8,9 @@ class Message extends Model
 {
     use SoftDeletes;
 
-    protected $fillable = ['body'];
-    protected $dates = ['deleted_at'];
+    protected $table = 'messages';
+    protected $fillable = 'body';
+    protected $dates = 'deleted_at';
 
 
     //relations

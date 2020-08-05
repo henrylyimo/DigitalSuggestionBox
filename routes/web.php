@@ -38,10 +38,10 @@ Route::get('/feedback',['uses' => 'PagesController@feedback']);
 // Route::post('/postChallenges',['uses' => 'ChallengeController@postChallenges']);
 
 //opinion
-Route::post('/postOpinion',['uses' => 'OPinionController@postOpinion']);
+Route::post('/postOpinion',['uses' => 'OpinionController@postOpinion']);
 
 // //Message
-// Route::post('/postM',['uses' => 'MessageController@postMessage']);
+Route::post('/reply',['uses' => 'MessageController@postMessage']);
 
 
 

@@ -16,9 +16,9 @@ class MessageController extends Controller
             'body' => 'required',
        ]);
 
-
+   if ($validator->fails()) return response()->json(['error'=>$validator->error(),],404);
        $message = new Message;
-       $message->body = $request->input('body');
+       $message->body = $request->input('reply');
        $message->save();
 
        return back();

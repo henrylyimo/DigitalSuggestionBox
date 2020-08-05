@@ -24,7 +24,7 @@
     color: black;
     cursor: pointer;
   }
-
+ 
 </style>    
 @endsection
 
@@ -34,109 +34,69 @@
     <div class="container pt-5">
 
       <div class="row">
-        @foreach ($opinion as $opinion)
+        @foreach ($opinions as $opinion)
             
+        <div class="col-md-6" id="accordion">
+          <div class="card">
+            <div class="card-body">
+            <p>{{ $opinion->body }}</p>
+              <div class="row">
+                <div class="col-md-9"></div>
+                <div class="col-md-3  ">
+                  <button class="btn btn-outline-primary ml-auto">Read more...</button>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-md-10">
+                  <div class="dropdown show">
+                    <a class="btn btn-transparent dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                      Contact                 
+                    </a>
+                    
+                    <div class="dropdown-menu " aria-labelledby="dropdownMenuLink">
+                      <a class="dropdown-item" href="#">{{ $opinion->contact_no }}</a>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-2 ml-auto">
+                  <div class="row">
+                    <div><a href="#" class="btn btn-transparent"><i class="fas fa-trash-alt"></i></a></div> <br>
+                    {{-- <div><a href="#" class="open-RequestDialog btn btn-transparent"><i class="fas fa-reply" data-id="replyId" data-toggle="modal" data-target="#replyModal"></i></a></div>  --}}
+                  <button class="btn btn-link" id="{{ $opinion->id }}" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                      <i class="fas fa-reply"></i>
+                    </button>
+                  </div>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-md-10">
+                <div id="collapseOne" class="collapse" aria-labelledby="{{ $opinion->id }}" data-parent="#accordion">
+                    <div class="card-body">
+                      <form action="reply" method="POST">
+                        @csrf
+                        <div class="form-group">
+                          <label for=""></label>
+                          <textarea class="form-control" name="reply"  cols="50" rows="5"></textarea>
+                        </div>
+                        <div class="row">
+                          <button type="submit" class="btn btn-primary">Send</button>
+                        </div>
+                      </form>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
         @endforeach
-        <div class="col-md-6">
-          <div class="card">
-            <div class="card-body">
-              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quae debitis perspiciatis animi explicabo quidem eveniet. Temporibus deleniti tempore magni suscipit.</p>
-              <div class="row">
-                <div class="col-md-9"></div>
-                <div class="col-md-3  ">
-                  <button class="btn btn-outline-primary ml-auto">Read more...</button>
-                </div>
-              </div>
-              <div class="row">
-                <div class="col-md-10">
-                  <div class="dropdown show">
-                    <a class="btn btn-transparent dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                      Contact                 
-                    </a>
-                  
-                    <div class="dropdown-menu " aria-labelledby="dropdownMenuLink">
-                    <a class="dropdown-item" href="#">0785130009</a>
-                    </div>
-                  </div>
-                </div>
-                <div class="col-md-2 ml-auto">
-                  <div class="row">
-                    <div><a href="#" class="btn btn-transparent"><i class="fas fa-trash-alt"></i></a></div> <br>
-                    <div><a href="#" class="btn btn-transparent"><i class="fas fa-reply" data-toggle="modal" data-target="#replyModal"></i></a></div> 
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="col-md-6">
-          <div class="card">
-            <div class="card-body">
-              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quae debitis perspiciatis animi explicabo quidem eveniet. Temporibus deleniti tempore magni suscipit.</p>
-              <div class="row">
-                <div class="col-md-9"></div>
-                <div class="col-md-3  ">
-                  <button class="btn btn-outline-primary ml-auto">Read more...</button>
-                </div>
-              </div>
-              <div class="row">
-                <div class="col-md-10">
-                  <div class="dropdown show">
-                    <a class="btn btn-transparent dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                      Contact                 
-                    </a>
-                  
-                    <div class="dropdown-menu " aria-labelledby="dropdownMenuLink">
-                    <a class="dropdown-item" href="#">0785130009</a>
-                    </div>
-                  </div>
-                </div>
-                <div class="col-md-2 ml-auto">
-                  <div class="row">
-                    <div><a href="#" class="btn btn-transparent"><i class="fas fa-trash-alt"></i></a></div> <br>
-                    <div><a href="#" class="btn btn-transparent"><i class="fas fa-reply" data-toggle="modal" data-target="#replyModal"></i></a></div> 
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
+        @else 
+        <p>no messages</p>
+        @endif
+
       </div>
       
 
-       {{-- @foreach ($opinions as $opinion)
-          
-      <div class="card m-3 mb-5  mt-5">
-        <div class="card-body">
-            <div class="box">
-              <h4 class="text-center font-weight-bold"></h4>
-            <p>{{ $opinion->body }}</p>
-            </div>
-            
-          <div class="row">
-            <div class="col-md-10">             
-            <button type="text" class="btn btn-transparent">{{ $opinion->contact_no }}</button>                        
-            </div>
-            <div class="col-md-2 ml-auto">
-              
-            </div>
-          </div>
-          
-          <br>
-          <div class="row">
-            <div class="col-md-10">
-                          
-            </div>
-            <div class="col-md-2 ml-auto">
-              <div class="row">
-                <div><a href="#" class="btn btn-transparent"><i class="fas fa-trash-alt"></i></a></div> <br>
-                <div><a href="#" class="btn btn-transparent"><i class="fas fa-reply" data-toggle="modal" data-target="#replyModal"></i></a></div> 
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-      @endforeach  --}}
     </div>
   {{-- @endif --}}
   {{-- reply modal --}}
@@ -150,17 +110,19 @@
           </button>
         </div>
         <div class="modal-body">
-          <form action="">
+          <form action="reply" method="POST">
+            @csrf
             <div class="form-group">
+              <input type="text" id="reply">
               <label for=""></label>
               <textarea class="form-control" name="reply" id="" cols="30" rows="10"></textarea>
             </div>
-          </form>
-        </div>
-        <div class="modal-footer">
-          <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-          <button type="button" class="btn btn-primary">Send</button>
-        </div>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+            <button type="submit" class="btn btn-primary">Send</button>
+          </div>
+        </form>
       </div>
     </div>
   </div>
@@ -170,3 +132,13 @@
 
     
 @endsection
+<script>
+    $(document).on("click", ".open-RequestDialog", function () {
+     var myRequestId = $(this).data('id');
+     console.log(myRequestId);
+     $(".modal-body #replyId").val( myRequestId );
+     // As pointed out in comments, 
+     // it is unnecessary to have to manually call the modal.
+     // $('#addBookDialog').modal('show');
+});
+</script>
