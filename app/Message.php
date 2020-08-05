@@ -8,7 +8,7 @@ class Message extends Model
 {
     use SoftDeletes;
 
-    protected $fillable = ['description','suggestion_id'];
+    protected $fillable = ['body'];
     protected $dates = ['deleted_at'];
 
 

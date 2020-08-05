@@ -41,7 +41,7 @@
               <div class="row">
                 <div class="col-md-9"></div>
                 <div class="col-md-3  ">
-                  <button class="btn btn-primary ml-auto">Read more...</button>
+                  <button class="btn btn-outline-primary ml-auto">Read more...</button>
                 </div>
               </div>
               <div class="row">
@@ -73,7 +73,7 @@
               <div class="row">
                 <div class="col-md-9"></div>
                 <div class="col-md-3  ">
-                  <button class="btn btn-primary ml-auto">Read more...</button>
+                  <button class="btn btn-outline-primary ml-auto">Read more...</button>
                 </div>
               </div>
               <div class="row">

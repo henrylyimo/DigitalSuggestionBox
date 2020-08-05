@@ -9,12 +9,12 @@ class ChallangeType extends Model
 {
     use SoftDeletes;
 
-    protected $table = 'challange_type';
+    protected $table = 'challange_types';
 
     protected $fillable = ['category'];
     protected $dates = ['deleted_at'];
 
     public function challanges(){
-        return $this->hasMany(challange::class);
+        return $this->hasMany(Challange::class);
     }
 }

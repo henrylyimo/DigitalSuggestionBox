@@ -246,7 +246,7 @@
                     </li>
 
                     <li class="nav-item">
-                        <a href="/update" class="nav-link">
+                        <a href="/feedback" class="nav-link">
                             <i class=" nav-icon far fa-envelope"></i>
                             <p>
                                 Feedback

@@ -38,5 +38,8 @@ class PagesController extends Controller
     public function student_opinion() {
         return view('pages.student_opinion');
     }
+    public function feedback() {
+        return view('pages.feedback');
+    }
 
 }

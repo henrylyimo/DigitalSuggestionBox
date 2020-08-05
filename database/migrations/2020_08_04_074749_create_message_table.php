@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateChallangeTypeTable extends Migration
+class CreateMessageTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,12 +13,11 @@ class CreateChallangeTypeTable extends Migration
      */
     public function up()
     {
-        Schema::create('challange_types', function (Blueprint $table) {
+        Schema::create('message', function (Blueprint $table) {
             $table->bigIncrements('id');
-            $table->String('category');
+            $table->String('body');
             $table->softdeletes();
             $table->timestamps();
-                 
         });
     }
 
@@ -29,6 +28,6 @@ class CreateChallangeTypeTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('challange_type');
+        Schema::dropIfExists('message');
     }
 }

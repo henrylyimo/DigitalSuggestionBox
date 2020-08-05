@@ -9,17 +9,17 @@ use App\Challange;
 
 class ChallangeController extends Controller
 {
-    public function getInnovation($id)
+    public function getCurruotion($id)
     {
-        $challangeType = challangeType::find($id);
+        $challangeType = ChallangeType::find($id);
         $challanges =  $challangeType->challanges;
-        return view('pages.student_challange', ['challanges' => $challanges]);
+        return view('pages.student_complaint', ['challanges' => $challanges]);
     }
     public function postChallange(Request $request)
     {
        $validator = Validator::make($request->all(),[
             'contact_no' => 'required',
-            'compalain' => 'required',
+            'complaint' => 'required',
             'solution' => 'required',
             'evidence' => 'required',
        ]);
@@ -28,7 +28,7 @@ class ChallangeController extends Controller
        $challange = new Challange;
        $challange->challange_type_id = $request->input('category');
        $challange->contact_no = $request->input('contact');
-       $challange->complain = $request->input('complain');
+       $challange->complaint = $request->input('complaint');
        $challange->solution = $request->input('solution');
        $challange->evidence = $request->input('evidence');
        $challange->save();
