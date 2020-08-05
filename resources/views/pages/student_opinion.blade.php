@@ -30,10 +30,13 @@
 
 @section('content')
 <body>
-  {{-- @if(count($opinions) > 0) --}}
+  @if(count($opinions) > 0)
     <div class="container pt-5">
 
       <div class="row">
+        @foreach ($opinion as $opinion)
+            
+        @endforeach
         <div class="col-md-6">
           <div class="card">
             <div class="card-body">
