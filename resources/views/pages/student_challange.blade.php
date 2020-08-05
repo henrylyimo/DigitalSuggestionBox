@@ -97,11 +97,12 @@
             <span aria-hidden="true">&times;</span>
           </button>
         </div>
+        
         <div class="modal-body">
           <form action="">
             <div class="form-group">
-              <label for=""></label>
-              <textarea class="form-control" name="reply" id="" cols="30" rows="10"></textarea>
+              <label for="body"></label>
+              <textarea class="form-control" name="body" id="body" cols="30" rows="10"> </textarea>
             </div>
           </form>
         </div>

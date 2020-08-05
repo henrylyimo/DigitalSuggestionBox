@@ -30,6 +30,7 @@ Route::get('/complaint_form',['uses' => 'PagesController@complaint_form']);
 Route::get('/opinion_form',['uses' => 'PagesController@opinion_form']);
 Route::get('/student_opinion/{id}',['uses' => 'OpinionController@getInnovation']);
 Route::get('/student_challange',['uses' => 'PagesController@student_challange']);
+Route::get('/feedback',['uses' => 'PagesController@feedback']);
 
 
 //challenge 
@@ -37,7 +38,10 @@ Route::get('/student_challange',['uses' => 'PagesController@student_challange'])
 // Route::post('/postChallenges',['uses' => 'ChallengeController@postChallenges']);
 
 //opinion
-Route::post('/postOpinion',['uses' => 'OPinionController@postOpinion']);
+Route::post('/postOpinion',['uses' => 'OpinionController@postOpinion']);
+
+// //Message
+Route::post('/reply',['uses' => 'MessageController@postMessage']);
 
 
 

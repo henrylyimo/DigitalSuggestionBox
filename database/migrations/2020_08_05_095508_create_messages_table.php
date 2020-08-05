@@ -15,11 +15,7 @@ class CreateMessagesTable extends Migration
     {
         Schema::create('messages', function (Blueprint $table) {
             $table->bigIncrements('id');
-
-            $table->string('description');
-            $table->bigInteger('suggestion_id');
-            
-            $table->softdeletes();
+            $table->text('body');
             $table->timestamps();
         });
     }
