@@ -152,62 +152,25 @@
                 <!---Student Challenge---->
                 <li class="nav-item has-treeview">
                     <a href="#" class="nav-link">
-                        <i class="nav-icon fas fa-align-center"></i>
+                        <i class="nav-icon fas fa-tasks"></i> 
                         <p>
                             Students Challenges
                             <i class="fas fa-angle-left right"></i>
                         </p>
                     </a>
                     <ul class="nav nav-treeview ml-4">
+                        @foreach ($complaintTypes as $complaintType)
                         <li class="nav-item">
-                            <a href="/student_challange" class="nav-link">
-                                <i class="far fa-comment nav-icon"></i>
-                                <p>Academy</p>
+                        <a href="/student_complaint/{{ $complaintType->id }}" class="nav-link">
+                                <i class="far fa-circle nav-icon"></i>
+                            <p>{{ $complaintType->category }}</p>
                             </a>
                         </li>
-                        <li class="nav-item">
-                            <a href="" class="nav-link">
-                                <i class="far fa-comment nav-icon"></i>
-                                <p>Corruption</p>
-                            </a>
-                        </li>                      
-                        <li class="nav-item">
-                            <a href="/student_challange " class="nav-link">
-                                <i class="far fa-comment nav-icon"></i>
-                                <p>Discrimination</p>
-                            </a>
-                        </li>
-                        <li class="nav-item">
-                            <a href="/student_challange " class="nav-link">
-                                <i class="far fa-comment nav-icon"></i>
-                                <p>Harassment</p>
-                            </a>
-                        </li>
-                        <li class="nav-item">
-                            <a href="/student_challange " class="nav-link">
-                                <i class="far fa-comment nav-icon"></i>
-                                <p>Unfair conduct</p>
-                            </a>
-                        </li>
-                        <li class="nav-item">
-                            <a href="/student_challange" class="nav-link">
-                                <i class="far fa-comment nav-icon"></i>
-                                <p>Profossinal Issue</p>
-                            </a>
-                        </li>
-                        <li class="nav-item">
-                            <a href="/student_challange" class="nav-link">
-                                <i class="far fa-comment nav-icon"></i>
-                                <p>Person Issue</p>
-                            </a>
-                        </li>
-                        <li class="nav-item">
-                            <a href="/student_challange"  class="nav-link">
-                                <i class="far fa-comment nav-icon"></i>
-                                <p>Other</p>
-                            </a>
-                        </li>
+                        @endforeach
+                     
+                        
                     </ul>
+                    
                 </li>
 
                     <li class="nav-item">

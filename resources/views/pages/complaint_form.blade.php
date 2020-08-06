@@ -64,24 +64,16 @@
           
         </section>
         <section class="cont pt-5 ">
-          <form action="">  
+          <form action="postComplaint" method="POST">  
+            @csrf
             <div class="row pl-3">
               <div class="col-md-5">
                 <div class="input-group mb-3">
-                  {{-- <div class="input-group-prepend">
-                    <label class="input-group-text" for="inputGroupSelect01">Options</label>
-                  </div> --}}
-                  <select required class="custom-select" >
-                    <option value="nature_of_complain" >Nature of Complaint</option>
-                    <option value="academy">Academy</option>
-                    <option value="corruption">Corruption</option>
-                    <option value="cafeteria">Cafeteria</option>
-                    <option value="discrimination">Discrimination</option>
-                    <option value="harassment">Harassment</option>
-                    <option value="unfair_cinduct">Unfair conduct</option>                   
-                    <option value="personal_issue">Personal Issues</option>
-                    <option value="professional_issue">Professional Issue</option>
-                    <option value="other">Other</option>
+                  <select class="custom-select" name="category" id="inputGroupSelect01" required>
+                    <option selected>Nature of Complaint</option>
+                    @foreach ($complaintTypes as $complaintType)
+                  <option value="{{ $complaintType->id }}">{{ $complaintType->category }}</option>
+                    @endforeach
                   
                   </select>
                 </div>
@@ -89,8 +81,7 @@
   
               <div class="col-md-5">
                 <div class="form-group">
-                  {{-- <label for="name">Course:</label> --}}
-                <input type="text" class="form-control" name="contact" placeholder="Phone no:" required>
+                <input type="text" class="form-control" value="{{ $complaintType->contact_no }}" name="contact" placeholder="Phone no:" required>
                 </div>
               </div>
             </div>
@@ -99,18 +90,18 @@
               <div class="col-md-11">
                 <div class="form-group mr-5 pt-5 text-center ">
                   <label for="complain">Please describe in detail about your complain and provide or identify all known person and document to your concerns:</label>
-                  <textarea class="form-control" name="complain" id="" rows="10" required=""></textarea>
+                <textarea class="form-control" name="complaint" id="" rows="10" required="">{{ $complaintType->complaint }}</textarea>
                 </div>
                 <div class="form-group mr-5 text-center pt-5">
                   <label for="solution">Please describe any positive solution you believe can help to solve your complaint</label>
-                  <textarea required class="form-control" name="solution" id="" rows="10" ></textarea>
+                  <textarea required class="form-control" name="solution" id="" rows="10" >{{ $complaintType->solution }}</textarea>
                 </div>
           
                 
-                  <div class="form-group">
+                  {{-- <div class="form-group">
                     <label for="">Upload evidence</label>
                     <input type="file" name="evidence" class="form-control-file" id="">
-                  </div>
+                  </div> --}}
   
                   <div class="row">
                     <div class="mr-5 ml-auto mb-3" >

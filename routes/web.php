@@ -33,9 +33,9 @@ Route::get('/student_challange',['uses' => 'PagesController@student_challange'])
 Route::get('/feedback',['uses' => 'PagesController@feedback']);
 
 
-//challenge 
-// Route::get('/getChallenges',['uses' => 'ChallengeController@getChallenges']);
-// Route::post('/postChallenges',['uses' => 'ChallengeController@postChallenges']);
+//complaint 
+Route::post('/postComplaint',['uses' => 'ComplaintController@postComplaint']);
+Route::get('/student_complaint/{id}',['uses' => 'ComplaintController@getComplaints']);
 
 //opinion
 Route::post('/postOpinion',['uses' => 'OpinionController@postOpinion']);

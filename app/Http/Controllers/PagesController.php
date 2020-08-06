@@ -2,6 +2,8 @@
 
 namespace App\Http\Controllers;
 use App\OpinionType;
+use App\ComplaintType;
+
 
 use Illuminate\Http\Request;
 
@@ -26,18 +28,18 @@ class PagesController extends Controller
         return view('pages.updatepage');
     }
     public function complaint_form() {
-        return view('pages.complaint_form');
-    }
+        $complaintTypes = ComplaintType::all();
+        return view('pages.complaint_form',['complaintTypes' => $complaintTypes]);    }
     public function opinion_form() {
         $opinionTypes = OpinionType::all();
         return view('pages.opinion_form',['opinionTypes' => $opinionTypes]);
     }
-    public function student_challange() {
-        return view('pages.student_challange');
-    }
-    public function student_opinion() {
-        return view('pages.student_opinion');
-    }
+    // public function student_challange() {
+    //     return view('pages.student_challange');
+    // }
+    // public function student_opinion() {
+    //     return view('pages.student_opinion');
+    // }
     public function feedback() {
         return view('pages.feedback');
     }
