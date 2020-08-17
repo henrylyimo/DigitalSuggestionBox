@@ -46,7 +46,7 @@ Route::put('/updateReply',['uses' => 'OpinionController@updateReply']);
 
 //resolver
 Route::post('/postResolver',['uses' => 'ResolverController@postResolver']);
-// Route::get('/student_complaint/{id}',['uses' => 'ComplaintController@getComplaints']);
+Route::get('/getResolver',['uses' => 'ResolverController@getResolver']);
 
 // //Message
 // Route::post('student_opinion/reply/{$id}',['uses' => 'MessageController@postMessage']);

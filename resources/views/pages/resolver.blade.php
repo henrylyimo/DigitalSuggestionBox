@@ -25,7 +25,7 @@
       <a href="#" class="btn btn-primary mb-3 ml-1" data-toggle="modal" data-target="#replyModal">Add Resolver</a>
     </div>
     </div>
-    
+    @if(count($resolvers) > 0)
     <table class="table table-hover">
       <thead class="thead-dark">
         <tr>
@@ -39,42 +39,27 @@
         </tr>
       </thead>
       <tbody>
+        @foreach ($resolvers as $resolver)
         <tr>
-          <th scope="row">1</th>
-          <td>Dr Abdullah</td>
-          <td>System Managment</td>
-          <td>Abdul@gmail.com</td>
-          <td>071578546</td>
-          <td>complaint</td>
+              
+        <th scope="row">{{ $resolver->id }}</th>
+        <td>{{ $resolver->name }}</td>
+          <td>{{ $resolver->professional }}</td>
+          <td>{{ $resolver->email}}</td>
+          <td>{{ $resolver->contact}}</td>
+          <td>{{ $resolver->role }}</td>
           <td><button class="btn btn-primary"><i class="fas fa-pencil-alt"></i></button>
             <a href="#" class="btn btn-danger"><i class="fas fa-trash-alt"></i></a>
           </td>
           
         </tr>
-        <tr>
-          <th scope="row">2</th>
-          <td>Dr Cosmas</td>
-          <td>FYP Coodimator</td>
-          <td>cosmas@gmail.com</td>
-          <td>0674367878</td>
-          <td>Report</td>
-          <td><button class="btn btn-primary"><i class="fas fa-pencil-alt"></i></button>
-            <a href="#" class="btn btn-danger"><i class="fas fa-trash-alt"></i></a>
-          </td>
-          
-        </tr>
-        <tr>
-          <th scope="row">3</th>
-          <td>Dr Kapis</td>
-          <td>System Managment</td>
-          <td> Kapis@gmail.com </td>
-          <td>0674368988</td>
-          <td>Network</td>
-          <td><button class="btn btn-primary"><i class="fas fa-pencil-alt"></i></button>
-            <a href="#" class="btn btn-danger"><i class="fas fa-trash-alt"></i></a>
-          </td>
-  
-        </tr>
+        
+        @endforeach
+
+        @else 
+         <p>no resolvers</p>
+         @endif
+       
     </table>
   
   </div>
@@ -91,7 +76,8 @@
         </div>
         
         <div class="modal-body">
-          <form action="postResolver" method="POST" enctype="multipart/form-data">
+          <form action="postResolver" method="POST">
+            @csrf
             <div class="form-group row">
               <label for="colFormLabelSm" class="col-sm-2 col-form-label ml-3">Name</label>
               <div class="col-sm-7">
@@ -127,12 +113,12 @@
               </div>
             </div>
 
-          </form>
-        </div>
-        <div class="modal-footer">
-          <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-          <button type="submit" class="btn btn-primary">Save</button>
-        </div>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+            <button type="submit" class="btn btn-primary">Save</button>
+          </div>
+        </form>
       </div>
     </div>
   </div>

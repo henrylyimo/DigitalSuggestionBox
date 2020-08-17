@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateResolverTable extends Migration
+class CreateResolversTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,7 +13,7 @@ class CreateResolverTable extends Migration
      */
     public function up()
     {
-        Schema::create('resolver', function (Blueprint $table) {
+        Schema::create('resolvers', function (Blueprint $table) {
             $table->bigIncrements('id');
             $table->String('name');
             $table->String('professional');
@@ -32,6 +32,6 @@ class CreateResolverTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('resolver');
+        Schema::dropIfExists('resolvers');
     }
 }

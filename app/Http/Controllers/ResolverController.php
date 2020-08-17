@@ -3,12 +3,16 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use Illumonate\support\Facades\Validator;
+use Illuminate\support\Facades\Validator;
 use App\Resolver;
 
 class ResolverController extends Controller
 {
-    public function resolver(Request $request)
+    public function getResolver() {
+           $resolver = Resolver::all();
+           return view('pages.resolver',['resolvers' => $resolver]);
+    }
+    public function postresolver(Request $request)
     {
         $validator = Validator::make($request->all(),[
             'name' => 'required',
