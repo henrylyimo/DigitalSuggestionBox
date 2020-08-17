@@ -31,17 +31,26 @@ Route::get('/opinion_form',['uses' => 'PagesController@opinion_form']);
 Route::get('/student_opinion/{id}',['uses' => 'OpinionController@getInnovation']);
 Route::get('/student_challange',['uses' => 'PagesController@student_challange']);
 Route::get('/feedback',['uses' => 'PagesController@feedback']);
+Route::get('/complaint_feedback',['uses' => 'PagesController@complaint_feedback']);
+Route::get('/opinion_feedback',['uses' => 'PagesController@opinion_feedback']);
+Route::get('/resolver',['uses' => 'PagesController@resolver']);
 
 
-//challenge 
-// Route::get('/getChallenges',['uses' => 'ChallengeController@getChallenges']);
-// Route::post('/postChallenges',['uses' => 'ChallengeController@postChallenges']);
+//complaint 
+Route::post('/postComplaint',['uses' => 'ComplaintController@postComplaint']);
+Route::get('/student_complaint/{id}',['uses' => 'ComplaintController@getComplaints']);
 
 //opinion
 Route::post('/postOpinion',['uses' => 'OpinionController@postOpinion']);
+Route::put('/updateReply',['uses' => 'OpinionController@updateReply']);
+
+//resolver
+Route::post('/postResolver',['uses' => 'ResolverController@postResolver']);
+// Route::get('/student_complaint/{id}',['uses' => 'ComplaintController@getComplaints']);
 
 // //Message
-Route::post('/reply',['uses' => 'MessageController@postMessage']);
+// Route::post('student_opinion/reply/{$id}',['uses' => 'MessageController@postMessage']);
+// Route::get('get/{id}',['uses' => 'OpinionController@getOpinion']);
 
 
 

@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateOpinionsTable extends Migration
+class CreateResolverTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,12 +13,13 @@ class CreateOpinionsTable extends Migration
      */
     public function up()
     {
-        Schema::create('opinions', function (Blueprint $table) {
+        Schema::create('resolver', function (Blueprint $table) {
             $table->bigIncrements('id');
-            $table->String('opinion_type_id');
-            $table->String('contact_no');
-            $table->Text('body');
-            $table->Text('reply');
+            $table->String('name');
+            $table->String('professional');
+            $table->String('email');
+            $table->String('contact');
+            $table->String('role');
             $table->softdeletes();
             $table->timestamps();
         });
@@ -31,6 +32,6 @@ class CreateOpinionsTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('opinions');
+        Schema::dropIfExists('resolver');
     }
 }

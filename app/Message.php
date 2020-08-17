@@ -9,12 +9,12 @@ class Message extends Model
     use SoftDeletes;
 
     protected $table = 'messages';
-    protected $fillable = 'body';
+    protected $fillable = ['body'];
     protected $dates = 'deleted_at';
 
 
     //relations
-    public function messages(){
-        return $this->belongsTo(Suggestion::class);
+    public function opinion(){
+        return $this->belongsTo(Opinion::class);
     }
 }

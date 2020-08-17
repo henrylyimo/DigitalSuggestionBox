@@ -83,7 +83,7 @@
                                    <!-- <label for="email" class="col-md-4 col-form-label text-md-right">{{ __('E-Mail Address') }}</label>-->
         
                                     <div class="col-md-8">
-                                        <input id="email" type="email" placeholder="Email" class="form-control ml-lg-3 @error('email') is-invalid @enderror" name="email" value="{{ old('email') }}" required autocomplete="email" autofocus>
+                                        <input id="email" type="email" placeholder="Reg-No" class="form-control ml-lg-3 @error('email') is-invalid @enderror" name="email" value="{{ old('email') }}" required autocomplete="email" autofocus>
                                         <span class="symbol-input">
                                             <i class="far fa-envelope"></i>
                                         </span>

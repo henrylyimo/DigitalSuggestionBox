@@ -33,35 +33,33 @@
     {{-- css style --}}
     @yield('styles')
 </head>
-<body class="hold-transition sidebar-mini layout-fixed">
+<body class=" sidebar layout-fixed">
 <div class="wrapper">
 
     <!-- Navbar -->
    
-    <nav class="main-header navbar navbar-expand-sm navbar-dark">
-
-
+    <nav class=" navbar navbar-expand fixed-top">
     <!----Left navbar links--->
     <ul class="navbar-nav">
-        <li class="nav-item">
-            <a href="#" class="nav-link" data-widget="pushmenu"><i class="fas fa-angle-left right"></i></a>
-        </li>
+        <div class="row">  
+            <li class="nav-item">
+                <div class="menu-box ml-2">
+                    <a href="#" class="nav-link" data-widget="pushmenu"><i class="fas fa-bars right" style="color: #141f1f"></i></a>
+                </div>    
+            </li>
+            <a class="navbar-brand d-flex" href="{{ url('/') }}">
+                <div><img src="{{ asset('/image/logo.png') }}" style="height: 40px;" class=""></div>
+                <div class="" style="color: #141f1f">SuggestionBox</div>
+            </a>
+        </div>
+        
     </ul>
      
 
         <!-- Right navbar links -->
-        <ul class="navbar-nav ml-auto">
+        <ul class="navbar-nav ml-auto ">
           <li class="nav-tem">
             
-        {{-- <form class="form-inline ml-auto">
-          <div class="input-group input-group-sm ">
-              <input class="form-control form-control-navbar inputform" type="search" placeholder="Search" aria-label="Search">
-              <div class="input-group-append">
-                  <button class="btn btn-navbar  bg-white" type="submit">
-                      <i class="fas fa-search"></i>
-                  </button>
-              </div>
-          </div> --}}
       </form>
           </li>
             <!-- Messages Dropdown Menu -->
@@ -71,11 +69,14 @@
             <li class="nav-item">
             <div class="user-panel d-flex">
                 <div class="image">
-                    <img src="{{ asset('/image/avatar.jpg') }}" class="img-circle">
+                    <img src="{{ asset('/image/icon.png') }}" class="img-circle">
                     
                 </div>
-                <div class="info">
-                    <a href=" " class="d-block" >{{ Auth::user()->name }}</a>
+                <div class="info" aria-labelledby="dropdownMenuLink">
+                    <a href=" " class="d-block " >{{ Auth::user()->name }}</a>
+
+ 
+                    
                 </div>
                 
             </div>
@@ -89,212 +90,206 @@
     <!-- /.navbar -->
 
     <!-- Main Sidebar Container -->
-    <aside class="main-sidebar  elevation-4 bg-dark ">
-        <!-- Brand Logo -->
-        <div class="navbar-brand">
-          <div class="row">
-            <img src="{{ asset('/image/logo.png') }}" height="40px" alt="" class="brand-image"> 
-            
-          </div>
-        </div>
-
+    <aside class="main-sidebar mt-5 "> 
         <!-- Sidebar -->
-        <div class="sidebar">
+      
+        <div class="sidebar-collape mt-3 ">
             <!-- Sidebar user panel (optional) -->
             
-
-            <!-- Sidebar Menu -->
-            <nav class="mt-2">
-                <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
+           <!-- Sidebar Menu -->
+            <nav class="mt-3">
+                <ul class="nav  nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
+                    
                     <!-- Add icons to the links using the .nav-icon class
                          with font-awesome or any other icon font library -->
 
-                         
-                    <li class="nav-item has-treeview menu-open ">
-                        <a href="/homepage" class="nav-link ">
-                            <i class="nav-icon fas fa-home"></i>
-                            <p>
-                                Home
-                            </p>
-                        </a>
-                    </li>
-                  
+                         <div class="container box1-side">
+                            <li class="nav-item has-treeview menu-open ">
+                                <a href="/homepage" class="nav-link ">
+                                    <p>
+                                        Home
+                                    </p>
+                                </a>
+                            </li>
+                        </div>  
 
-                    
-                    <li class="nav-item">
-                        <a href="/update" class="nav-link">
-                            <i class=" nav-icon far fa-newspaper"></i>
-                            <p>
-                                Update
-                            </p>
-                        </a>
-                    </li>
+                        <div class="container box-side">
+                            <li class="nav-item">
+                                <a href="/update" class="nav-link">
+                                    <p>
+                                        Update
+                                    </p>
+                                </a> 
+                            </li>
+                        </div>
 
-                    <li class="nav-item">
-                        <a href="/profilepage" class="nav-link">
-                            <i class="nav-icon far fa-user"></i>
-                            <p>
-                                Profile
-                            </p>
-                        </a>
-                    </li>
+                        <div class="container box-side">
+                            <li class="nav-item">
+                                <a href="/profilepage" class="nav-link">
+                                    <p>
+                                        Profile
+                                    </p>
+                                </a>
+                            </li>
+                        </div>
 
-                  
-                    <li class="nav-item">
-                        <a href="/complaint_form" class="nav-link">
-                            <i class="nav-icon fas fa-align-center"></i>
-                            <p>
-                                Complaint Form
-                            </p>
-                        </a>
-                    </li>
+                        <div class="container box-side">
+                            <li class="nav-item">
+                                <a href="/complaint_form" class="nav-link">
+                                    <p>
+                                        Complaint Form
+                                    </p>
+                                </a>
+                            </li>
+                        </div>         
 
                 <!---Student Challenge---->
-                <li class="nav-item has-treeview">
-                    <a href="#" class="nav-link">
-                        <i class="nav-icon fas fa-align-center"></i>
-                        <p>
-                            Students Challenges
-                            <i class="fas fa-angle-left right"></i>
-                        </p>
-                    </a>
-                    <ul class="nav nav-treeview ml-4">
-                        <li class="nav-item">
-                            <a href="/student_challange" class="nav-link">
-                                <i class="far fa-comment nav-icon"></i>
-                                <p>Academy</p>
-                            </a>
-                        </li>
-                        <li class="nav-item">
-                            <a href="" class="nav-link">
-                                <i class="far fa-comment nav-icon"></i>
-                                <p>Corruption</p>
-                            </a>
-                        </li>                      
-                        <li class="nav-item">
-                            <a href="/student_challange " class="nav-link">
-                                <i class="far fa-comment nav-icon"></i>
-                                <p>Discrimination</p>
-                            </a>
-                        </li>
-                        <li class="nav-item">
-                            <a href="/student_challange " class="nav-link">
-                                <i class="far fa-comment nav-icon"></i>
-                                <p>Harassment</p>
-                            </a>
-                        </li>
-                        <li class="nav-item">
-                            <a href="/student_challange " class="nav-link">
-                                <i class="far fa-comment nav-icon"></i>
-                                <p>Unfair conduct</p>
-                            </a>
-                        </li>
-                        <li class="nav-item">
-                            <a href="/student_challange" class="nav-link">
-                                <i class="far fa-comment nav-icon"></i>
-                                <p>Profossinal Issue</p>
-                            </a>
-                        </li>
-                        <li class="nav-item">
-                            <a href="/student_challange" class="nav-link">
-                                <i class="far fa-comment nav-icon"></i>
-                                <p>Person Issue</p>
-                            </a>
-                        </li>
-                        <li class="nav-item">
-                            <a href="/student_challange"  class="nav-link">
-                                <i class="far fa-comment nav-icon"></i>
-                                <p>Other</p>
-                            </a>
-                        </li>
-                    </ul>
-                </li>
-
+                <div class="container box-side">
+                    <li class="nav-item has-treeview">
+                        <a href="#" class="nav-link">
+                            <p>
+                                Students Challenges
+                                <i class="fas fa-angle-left right"></i>
+                            </p>
+                        </a>
+                        <ul class="nav nav-treeview ml-4">
+                            @foreach ($complaintTypes as $complaintType)
+                            <li class="nav-item box2-side">
+                            <a href="/student_complaint/{{ $complaintType->id }}" class="nav-link">
+                                    <i class="far fa-circle nav-icon"></i>
+                                <p>{{ $complaintType->category }}</p>
+                                </a>
+                            </li>
+                            @endforeach   
+                        </ul>    
+                    </li>
+                </div>
+                
+                   
+                <div class="container box-side">
                     <li class="nav-item">
                         <a href="/opinion_form" class="nav-link">
-                            <i class="nav-icon fas fa-tasks"></i>
                             <p>
                                 Opinion Form
                             </p>
                         </a>
                     </li>
-
-
+                </div>
+                    
                     <!--- Students Opinion---->
+                    <div class="container box-side">
+                        <li class="nav-item has-treeview">
+                            <a href="#" class="nav-link">
+                                <p>
+                                    Students Opinions
+                                    <i class="fas fa-angle-left right"></i>
+                                </p>
+                            </a>
+                            <ul class="nav nav-treeview ml-4">
+                                @foreach ($opinionTypes as $opinionType)
+                                <li class="nav-item box2-side">
+                                <a href="/student_opinion/{{ $opinionType->id }}" class="nav-link">
+                                    <p>{{ $opinionType->category }}</p>
+                                    </a>
+                                </li>
+                                @endforeach                       
+                            </ul>
+                        </li>
+                    </div>  
 
-                    <li class="nav-item has-treeview">
-                        <a href="#" class="nav-link">
-                            <i class="nav-icon fas fa-tasks"></i> 
-                            <p>
-                                Students Opinions
-                                <i class="fas fa-angle-left right"></i>
-                            </p>
-                        </a>
-                        <ul class="nav nav-treeview ml-4">
-                            @foreach ($opinionTypes as $opinionType)
-                            <li class="nav-item">
-                            <a href="/student_opinion/{{ $opinionType->id }}" class="nav-link">
-                                    <i class="far fa-circle nav-icon"></i>
-                                <p>{{ $opinionType->category }}</p>
-                                </a>
-                            </li>
-                            @endforeach
-                         
-                            
-                        </ul>
-                        
-                    </li>
+                    <div class="container box-side">
+                        <li class="nav-item">
+                            <a href="/update" class="nav-link">
+                                <p>
+                                    Update
+                                </p>
+                            </a> 
+                        </li>
+                    </div>
 
-                    <li class="nav-item">
-                        <a href="/feedback" class="nav-link">
-                            <i class=" nav-icon far fa-envelope"></i>
-                            <p>
-                                Feedback
-                            </p>
-                        </a>
-                    </li>
+                    <div class="container box-side">
+                        <li class="nav-item ">
+                            <a href="#" class="nav-link">
+                                <p>
+                                   My Feedback
+                                </p>
+                            </a>
+                        </li>
+                    </div>
 
+                    <div class="container box-side">
+                        <li class="nav-item ml-3">
+                            <a href="/complaint_feedback" class="nav-link">
+                                <p>
+                                    Complaint Feedback
+                                </p>
+                            </a>
+                        </li>
+                    </div>
 
+                    <div class="container box-side">
+                        <li class="nav-item ml-3">
+                            <a href="/opinion_feedback" class="nav-link">
+                                <p>
+                                    Opinion Feedback
+                                </p>
+                            </a>
+                        </li>
+                    </div>
 
-                   
-                    <li class="nav-item">
-                        <a href="/create_update" class="nav-link">
-                            <i class=" nav-icon far fa-newspaper"></i>
-                            <p>
-                                Create News
-                            </p>
-                        </a>
-                    </li>
-                   
-
-                    <li class="nav-item">
-                        <a href="/about" class="nav-link">
-                            <i class="nav-icon far fa-address-card"></i>
-                            <p>
-                                About
-                            </p>
-                        </a>
-                    </li>
+                    <div class="container box-side">
+                        <li class="nav-item">
+                            <a href="/resolver" class="nav-link">
+                                <p>
+                                    Resolver
+                                </p>
+                            </a>
+                        </li>
+                    </div>
 
                     @role('Students')
+                    <div class="container box-side">
+                        <li class="nav-item">
+                            <a href="/create_update" class="nav-link">
+                                <p>
+                                    Create News
+                                </p>
+                            </a>
+                        </li>
+                    </div>
+                    @endrole
+
+
+
+                    @role('Students')
+                    <div class="container box-side">
+                        <li class="nav-item">
+                            <a href="/about" class="nav-link">
+                                <p>
+                                    About
+                                </p>
+                            </a>
+                        </li>
+                    </div>
+                    @endrole
+                    
+
+                    <div class="container box-side">
+                        @role('Students')
                     <li class="nav-item has-treeview">
                         <a href="#" class="nav-link">
-                            <i class=" nav-icon fas fa-user-cog"></i>
                             <p>
                                 User
-                                <i class="right fas fa-angle-left"></i>
                             </p>
                         </a>
                         <ul class="nav nav-treeview">
                             <li class="nav-item">
                                 <a href="#" class="nav-link">
-                                    <i class="far fa-circle nav-icon"></i>
                                     <p>Admin</p>
                                 </a>
                             </li>
                             <li class="nav-item has-treeview">
                                 <a href="#" class="nav-link">
-                                    <i class="far fa-circle nav-icon"></i>
                                     <p>
                                         Student                                       
                                     </p>
@@ -302,7 +297,6 @@
                             </li>
                             <li class="nav-item has-treeview">
                                 <a href="#" class="nav-link">
-                                    <i class="far fa-circle nav-icon"></i>
                                     <p>
                                         Secretary                                      
                                     </p>
@@ -312,7 +306,9 @@
                         </ul>
                     </li>
                     @endrole
-
+                    </div>
+                    
+                    <div class="container box-side">
                     <li class="nav-item has-treeview">
                         <a href="#" class="nav-link">
                             <i class="nav-icon fas fa-sign-out-alt"></i> 
@@ -322,7 +318,7 @@
                         </a>
                         <ul class="nav nav-treeview">
                     <li class="nav-link">
-                        <a class="far fa-circle nav-icon" href="{{ route('logout') }}"
+                        <a class="far fa-circle nav-icon " style="color: black" href="{{ route('logout') }}"
                            onclick="event.preventDefault();
                                                      document.getElementById('logout-form').submit();">
                                {{ __('  Logout') }}
@@ -334,10 +330,12 @@
                     </li>
                         </ul>
                     </li>
+                </div>
                 </ul>
             </nav>
             <!-- /.sidebar-menu -->
         </div>
+ 
         <!-- /.sidebar -->
     </aside>
 
@@ -398,4 +396,4 @@
 
 @yield('scripts')
 </body>
-</html>
+</html> 

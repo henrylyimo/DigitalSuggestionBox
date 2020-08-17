@@ -31,11 +31,12 @@
 @section('content')
 <body>
   @if(count($opinions) > 0)
-    <div class="container pt-5">
+    <div class="container mt-5 pt-5">
 
       <div class="row">
-        @foreach ($opinions as $opinion)
-            
+
+            @foreach ($opinions as $opinion)
+                
         <div class="col-md-6" id="accordion">
           <div class="card">
             <div class="card-body">
@@ -61,20 +62,25 @@
                 <div class="col-md-2 ml-auto">
                   <div class="row">
                     <div><a href="#" class="btn btn-transparent"><i class="fas fa-trash-alt"></i></a></div> <br>
-                    {{-- <div><a href="#" class="open-RequestDialog btn btn-transparent"><i class="fas fa-reply" data-id="replyId" data-toggle="modal" data-target="#replyModal"></i></a></div>  --}}
-                  <button class="btn btn-link" id="{{ $opinion->id }}" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                  <div><a href="#" class="open-RequestDialog btn btn-transparent"><i class="fas fa-reply" data-toggle="modal"data-reply="" data-target="#replyModal"></i></a></div> 
+                  {{-- <a href="/get" class="btn btn-link" id="{{ $opinion->id }}" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
                       <i class="fas fa-reply"></i>
-                    </button>
+                  </a> --}}
                   </div>
                 </div>
               </div>
               <div class="row">
                 <div class="col-md-10">
-                <div id="collapseOne" class="collapse" aria-labelledby="{{ $opinion->id }}" data-parent="#accordion">
+                <div id="collapseOne" class="collapse" aria-labelledby="" data-parent="#accordion">
                     <div class="card-body">
-                      <form action="reply" method="POST">
+                    <form action="#" method="POST">
                         @csrf
                         <div class="form-group">
+                          <div>
+                            <label for="">opinion number</label>
+                        <input type="number" name="number" value="">
+                          </div>
+                          <input type="text" name="replyId" hidden>
                           <label for=""></label>
                           <textarea class="form-control" name="reply"  cols="50" rows="5"></textarea>
                         </div>
@@ -89,10 +95,11 @@
             </div>
           </div>
         </div>
+     
         @endforeach
-        @else 
-        <p>no messages</p>
-        @endif
+@else 
+ <p>no opinion</p>
+ @endif
 
       </div>
       
@@ -104,28 +111,27 @@
     <div class="modal-dialog" role="document">
       <div class="modal-content">
         <div class="modal-header">
-          {{-- <h5 class="modal-title" id="exampleModalLabel">Modal title</h5> --}}
+          <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
           <button type="button" class="close" data-dismiss="modal" aria-label="Close">
             <span aria-hidden="true">&times;</span>
           </button>
         </div>
+        
         <div class="modal-body">
-          <form action="reply" method="POST">
-            @csrf
+          <form action="">
             <div class="form-group">
-              <input type="text" id="reply">
-              <label for=""></label>
-              <textarea class="form-control" name="reply" id="" cols="30" rows="10"></textarea>
+              <label for="body"></label>
+              <textarea class="form-control" name="body" id="body" cols="30" rows="10"> </textarea>
             </div>
-          </div>
-          <div class="modal-footer">
-            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-            <button type="submit" class="btn btn-primary">Send</button>
-          </div>
-        </form>
+          </form>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+          <button type="button" class="btn btn-primary">Save changes</button>
+        </div>
       </div>
     </div>
-  </div>
+  </div>  
   
 </body>
 
@@ -133,12 +139,21 @@
     
 @endsection
 <script>
-    $(document).on("click", ".open-RequestDialog", function () {
-     var myRequestId = $(this).data('id');
-     console.log(myRequestId);
-     $(".modal-body #replyId").val( myRequestId );
+    // $(document).on("click", ".open-RequestDialog", function () {
+    //  var myRequestId = $(this).data('id');
+    //  console.log(myRequestId);
+    //  $(".modal-body #replyId").val( myRequestId );
      // As pointed out in comments, 
      // it is unnecessary to have to manually call the modal.
      // $('#addBookDialog').modal('show');
-});
+
+//      $('#replyModal').on('show.bs.modal',function(event){
+//        var button = $(event.relatedTarget)
+//        var reply =button.data('reply')
+
+//        var modal =$(this)
+//        modal.find('#editForm').attr('action','edit/reply/'+ reply['id'])
+//        modal.find('.replyNo').text(reply[number])
+//      }
+// });
 </script>

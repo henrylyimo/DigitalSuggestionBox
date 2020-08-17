@@ -4,7 +4,9 @@ body {
 }
 .navbar
 {
-  color: black;
+  color: grey;
+  background-color: whitesmoke;
+  border-bottom: 1px solid #b3cccc;
 }
 
 .navbar .far
@@ -31,17 +33,11 @@ body {
 {
   
   color: black;
-  font-weight: bold;
+  font-weight: 500;
+  
   padding-left: 30px;
 }
-.main-sidebar .nav-item:hover
-{
-  
-  cursor: pointer;
-  border-left: 3px solid #3490dc;
-  
- 
-}
+
 .active
 {
   cursor: pointer;
@@ -51,7 +47,14 @@ body {
 }
 .main-sidebar
 { 
-  background-color: dark;
+  background-color: transparent;
+  margin-bottom: 150px;
+}
+
+.sidebar
+{ 
+  background-color: transparent;
+  
 }
 .input-group 
 {
@@ -73,3 +76,83 @@ body {
 {
   background-color: whitesmoke;
 }
+.fas .fa-bars
+{
+  color: black;
+}
+.box-side
+{
+  background-color: #cce6ff;
+  margin-top: 1px;
+  margin-left: 7px;
+  margin-right: 5px;
+}
+.box-side:hover
+{
+  cursor: pointer;
+  background-color:  #99b3ff;
+  color: black;
+  margin-top: 1px;
+  margin-left: 7px;
+  margin-right: 5px;
+  font-weight: bold;
+}
+
+.menu-box
+{
+  
+  border: 1px solid black;
+  border-radius: 5px;
+}
+.sidebar-collapse
+{
+  color: black;
+}
+.sidebar-collapse .ul .li
+{
+  color: black;
+}
+.box-side .fas
+{
+  color: black;
+}
+.box-side .far
+{
+  color: transparent;
+}
+.box-side p
+{
+  color: black;
+}
+
+.box1-side
+{
+  background-color: #cce6ff;
+  margin-top: 40px;
+  margin-left: 7px;
+  margin-right: 5px;
+}
+.box1-side p
+{
+  color: black;
+}
+
+.box1-side:hover
+{
+  background-color: #99b3ff;
+  margin-top: 40px;
+  margin-left: 7px;
+  margin-right: 5px;
+  font-weight: bold;
+}
+
+.box2-side p:hover
+{
+  color: whitesmoke;
+}
+
+
+
+
+
+

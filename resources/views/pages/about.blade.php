@@ -30,7 +30,7 @@
 
 @section('content')
 <body>
-  <div class="cont">
+  <div class="cont mt-5">
     <div class="container">
       <div class="row">
         

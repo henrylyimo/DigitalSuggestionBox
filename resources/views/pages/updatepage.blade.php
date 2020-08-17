@@ -21,7 +21,7 @@
 </style> --}}
 
 <body>
-<div class="container">
+<div class="container pt-5">
    <h1 class="text-center font-weight-bold pt-4">News and Updates</h1>
    <div class="container pt-5">
     <div class="card">

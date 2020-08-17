@@ -29,8 +29,26 @@ class OpinionController extends Controller
        $opinion->opinion_type_id = $request->input('category');
        $opinion->contact_no = $request->input('contact');
        $opinion->body = $request->input('opinion');
+       $opinion->reply = '';
        $opinion->save();
 
+       return back();
+    }
+    
+
+    public function updateReply(Request $request) {
+
+        $reply = Opinion::find($request->id);
+
+        if(!$reply) {
+            return response()->json(['error' => 'reply not found']);
+        }
+
+        $reply->reply = $request->reply;
+
+        $reply->save();
+
+        return response()->json(['esay' => $reply], 201);
        return back();
     }
 }

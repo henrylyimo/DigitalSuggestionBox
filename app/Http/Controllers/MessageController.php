@@ -10,7 +10,7 @@ use Illuminate\Http\Request;
 class MessageController extends Controller
 {
 
-    public function postMessage(Request $request)
+    public function postMessage(Request $request, $id)
     {
        $validator = Validator::make($request->all(),[
             'body' => 'required',
@@ -23,4 +23,6 @@ class MessageController extends Controller
 
        return back();
     }
+
+  
 }
