@@ -21,15 +21,17 @@ class UserSeeder extends Seeder
 
     //  secrtary
         $user = new User();
-        $user->name = 'usab manager';
-        $user->email = 'secretary@gmail.com';
-        $user->password = bcrypt('admin');
+        $user->name = 'USAB manager';
+        $user->email = 'usab@gmail.com';
+        $user->password = bcrypt('usab');
         $user->save();
 
+
+    //   Student
         $user = new User();
-        $user->name = 'anord';
-        $user->email = '2017-04-01594';
-        $user->password = bcrypt('coict');
+        $user->name = 'Henry';
+        $user->email = 'henry@gmail.com';
+        $user->password = bcrypt('coict2019');
         $user->save();
 
      
