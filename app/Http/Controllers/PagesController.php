@@ -52,5 +52,8 @@ class PagesController extends Controller
     public function resolver() {
         return view('pages.resolver');
     }
+    public function user() {
+        return view('pages.user');
+    }
 
 }

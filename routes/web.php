@@ -34,6 +34,7 @@ Route::get('/feedback',['uses' => 'PagesController@feedback']);
 Route::get('/complaint_feedback',['uses' => 'PagesController@complaint_feedback']);
 Route::get('/opinion_feedback',['uses' => 'PagesController@opinion_feedback']);
 Route::get('/resolver',['uses' => 'PagesController@resolver']);
+Route::get('/user',['uses' => 'PagesController@user']);
 
 
 //complaint 

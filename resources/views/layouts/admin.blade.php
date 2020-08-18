@@ -289,21 +289,16 @@
                                 User
                             </p>
                         </a>
-                        <ul class="nav nav-treeview">
-                            <li class="nav-item">
-                                <a href="#" class="nav-link">
-                                    <p>Admin</p>
-                                </a>
-                            </li>
+                        <ul class="nav nav-treeview">                           
                             <li class="nav-item has-treeview">
-                                <a href="#" class="nav-link">
+                                <a href="/user" class="nav-link">
                                     <p>
-                                        Student                                       
+                                        Students                                       
                                     </p>
                                 </a>                                
                             </li>
                             <li class="nav-item has-treeview">
-                                <a href="#" class="nav-link">
+                                <a href="/student" class="nav-link">
                                     <p>
                                         Secretary                                      
                                     </p>
