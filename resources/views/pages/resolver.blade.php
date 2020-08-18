@@ -34,7 +34,6 @@
           <th scope="col">Professional</th>
           <th scope="col">Email</th>
           <th scope="col">Contact</th>
-          <th scope="col">Role</th>
           <th scope="col">Action</th>  
         </tr>
       </thead>
@@ -47,8 +46,9 @@
           <td>{{ $resolver->professional }}</td>
           <td>{{ $resolver->email}}</td>
           <td>{{ $resolver->contact}}</td>
-          <td>{{ $resolver->role }}</td>
-          <td><button class="btn btn-primary"><i class="fas fa-pencil-alt"></i></button>
+        <td>
+          <a type="button" class="btn btn-primary" data-toggle="modal" data-target="#edit_resolver" data-resolver="{{($resolver)}}">
+            <i class="fas fa-pencil-alt"></i></a>
             <a href="#" class="btn btn-danger"><i class="fas fa-trash-alt"></i></a>
           </td>
           
@@ -57,7 +57,21 @@
         @endforeach
 
         @else 
-         <p>no resolvers</p>
+        {{-- <div class="row">
+          <div class="col-md-4"></div>
+          <div class="col-md-4">
+            <div class="card text-white bg-primary mb-3" style="max-width: 18rem;">
+              <div class="card-body">
+                <div class="row">
+                  <div class="col-md-8">
+                    <p></p>                    
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4"></div>
+        </div> --}}
          @endif
        
     </table>
@@ -106,10 +120,57 @@
               </div>
             </div>
 
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+            <button type="submit" class="btn btn-primary">Save</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+
+
+  {{-- edit form modal --}}
+  <div class="modal fade" id="edit_resolver" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">Add new resolver</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        
+
+        <form action="{{url("/resolver/{id}")}}" method="POST">
+          @csrf
+        <div class="modal-body">
             <div class="form-group row">
-              <label for="colFormLabelSm" class="col-sm-2 col-form-label ml-3">Role</label>
+              <label for="colFormLabelSm" class="col-sm-2 col-form-label ml-3">Name</label>
               <div class="col-sm-7">
-                <input required type="text" name="role" class="form-control form-control-sm ml-4" id="" placeholder="">
+                <input required type="text"  name="name" class="form-control form-control-sm ml-4" id="name" placeholder="">
+              </div>
+            </div>
+
+            <div class="form-group row">
+              <label for="colFormLabelSm" class="col-sm-2 col-form-label ml-3">Professional</label>
+              <div class="col-sm-7">
+                <input required type="text" name="professional" class="form-control form-control-sm ml-4" id="professional" placeholder="">
+              </div>
+            </div>
+
+            <div class="form-group row">
+              <label for="colFormLabelSm" class="col-sm-2 col-form-label ml-3">Email</label>
+              <div class="col-sm-7">
+                <input required type="text" name="email" class="form-control form-control-sm ml-4" id="email" placeholder="abc@abcd.com">
+              </div>
+            </div>
+
+            <div class="form-group row">
+              <label for="colFormLabelSm" class="col-sm-2 col-form-label ml-3">Contact_no</label>
+              <div class="col-sm-7">
+                <input required type="text" name="contact" class="form-control form-control-sm ml-4" id="contact" placeholder="">
               </div>
             </div>
 
@@ -125,5 +186,23 @@
   
 </body>
 
+    
+@endsection
+
+@section('scripts')
+<script>
+  $('#edit_resolver').on('show.bs.modal' , function(event)){
+    var button = $(event.relatedTarget)
+    var resolver = button.data('resolver')
+
+
+
+    var modal =$(this)
+    modal.find('#name').val(resolver['name'])
+    modal.find('#professional').val(resolver['professional'])
+    modal.find('#email').val(resolver['email'])
+    modal.find('#contact').val(resolver['contact'])
+  }
+</script>
     
 @endsection

@@ -9,7 +9,7 @@ class Resolver extends Model
 {
     use SoftDeletes;
 
-    protected $fillable = ['name', 'professional', 'email', 'contact', 'role'];
+    protected $fillable = ['name', 'professional', 'email', 'contact',];
     protected $date = ['deleted_at'];
 
 

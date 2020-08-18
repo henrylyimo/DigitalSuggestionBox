@@ -1,4 +1,4 @@
-{{-- @extends('layouts.admin')
+@extends('layouts.admin')
 
 @section('styles')
 <style>
@@ -31,7 +31,6 @@
           <th scope="col">#</th>
           <th scope="col">Name</th>
           <th scope="col">Reg-no</th>
-          <th scope="col">Password</th>
           <th scope="col">Course</th>
           <th scope="col">Role</th>
           <th scope="col">Action</th>  
@@ -45,7 +44,6 @@
         <th scope="row">1</th>
         <td>Lyimo Henry Patrick</td>
           <td>2017-04-01597</td>
-          <td>Coict2019</td>
           <td>Bsc with Computer Science</td>
           <td>Student</td>
           <td><button class="btn btn-primary"><i class="fas fa-pencil-alt"></i></button>
@@ -59,7 +57,7 @@
   </div>
 
   {{-- reply modal --}}
-  {{-- <div class="modal fade" id="replyModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal fade" id="replyModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
     <div class="modal-dialog" role="document">
       <div class="modal-content">
         <div class="modal-header">
@@ -86,17 +84,17 @@
               </div>
             </div>
 
-            <div class="form-group row">
-              <label for="colFormLabelSm" class="col-sm-2 col-form-label ml-3">password</label>
-              <div class="col-sm-7">
-                <input required type="password" name="password" class="form-control form-control-sm ml-4" id="" placeholder="">
-              </div>
-            </div>
 
             <div class="form-group row">
               <label for="colFormLabelSm" class="col-sm-2 col-form-label ml-3">Course</label>
-              <div class="col-sm-7">
-                <input required type="text" name="course" class="form-control form-control-sm ml-4" id="" placeholder="">
+              <div class="input-group col-sm-7 ml-4">
+                <select class="custom-select  " name="role" id="inputGroupSelect01" required>
+                  <option selected>Choose Course</option>
+                  <option value="1">Bsc with Computer</option>
+                  <option value="2">Bsc in Computer Science</option>
+                  <option value="3">Bsc in Computer Engineering</option>
+                  <option value="4">Bsc in Telecommunication</option>
+                </select>
               </div>
             </div>
 
@@ -121,7 +119,7 @@
     </div>
   </div>
   
-</body> --}}
+</body>
+@endsection
 
     
-{{-- @endsection  --}}

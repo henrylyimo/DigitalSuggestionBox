@@ -9,8 +9,8 @@ use App\Resolver;
 class ResolverController extends Controller
 {
     public function getResolver() {
-           $resolver = Resolver::all();
-           return view('pages.resolver',['resolvers' => $resolver]);
+           $resolvers = Resolver::all();
+           return view('pages.resolver',['resolvers' => $resolvers ]);
     }
     public function postresolver(Request $request)
     {
@@ -19,7 +19,7 @@ class ResolverController extends Controller
             'professional' => 'required',
             'email' => 'required',
             'contact' => 'required',
-            'role' => 'required',          
+                     
         ]);
 
         $resolver = new Resolver;
@@ -27,9 +27,27 @@ class ResolverController extends Controller
         $resolver->professional = $request->input('professional');
         $resolver->email = $request->input('email');
         $resolver->contact = $request->input('contact');
-        $resolver->role = $request->input('role');
+       
         $resolver->save();
 
         return back();
     }
+
+    public function editResolver(Request $request, $id)
+    {
+        $resolver = Resolver::find($id);
+
+        $resolver->update([
+            'name'=> $request->name,
+            'professional'=> $request->professional,
+            'email'=> $request->email,
+            'contact'=> $request->contact
+        
+        ]);
+        
+
+        return redirect('/resolver')->with('message', 'Resolver Update successfully');
+
+    }
+
 }

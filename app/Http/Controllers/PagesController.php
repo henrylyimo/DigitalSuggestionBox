@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 use App\OpinionType;
 use App\ComplaintType;
+use App\Message;
 
 
 use Illuminate\Http\Request;
@@ -44,7 +45,8 @@ class PagesController extends Controller
         return view('pages.feedback');
     }
     public function complaint_feedback() {
-        return view('pages.complaint_feedback');
+        $messages = Message::where('messagable_type', 'App\Complaint')->get();
+        return view('pages.complaint_feedback',['messages' => $messages]);
     }
     public function opinion_feedback() {
         return view('pages.opinion_feedback');

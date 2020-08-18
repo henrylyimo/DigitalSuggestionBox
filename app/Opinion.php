@@ -22,4 +22,8 @@ class Opinion extends Model
     public function opinionType(){
         return $this->belongsTo(OpinionType::class);
     }
+
+    public function messages(){
+        return $this->morphMany(Message::class, 'messagable');
+    }
 }

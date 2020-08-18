@@ -62,7 +62,7 @@
             <div class="col-md-2 ml-auto">
               <div class="row">
                 <div><a href="#" class="btn btn-transparent"><i class="fas fa-trash-alt"></i></a></div> <br>
-                <div><a href="#" class="btn btn-transparent"><i class="fas fa-reply" data-toggle="modal" data-target="#replyModal"></i></a></div> 
+                <div><a href="#" class="open-Dialog btn btn-transparent" data-toggle="modal" data-target="#replyModal" data-id={{$complaint->id}}><i class="fas fa-reply" ></i></a></div> 
               </div>
             </div>
           </div>
@@ -88,17 +88,21 @@
         </div>
         
         <div class="modal-body">
-          <form action="">
+
+          <form action="/messageComplaint" method="POST">
+            @csrf
             <div class="form-group">
+              <input type="text" id='complaintId' name="complaintId" hidden>
               <label for="body"></label>
               <textarea class="form-control" name="body" id="body" cols="30" rows="10"> </textarea>
             </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+              <button type="submit" class="btn btn-primary">Save changes</button>
+            </div>
           </form>
         </div>
-        <div class="modal-footer">
-          <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-          <button type="button" class="btn btn-primary">Save changes</button>
-        </div>
+        
       </div>
     </div>
   </div>
@@ -107,4 +111,14 @@
 
 
     
+@endsection
+
+@section('scripts')
+<script>
+ $(document).on("click", ".open-Dialog", function(){
+var id = $(this).data('id');
+console.log(id);
+$(".modal-body #complaintId").val(id);
+ });   
+</script>  
 @endsection

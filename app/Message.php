@@ -10,11 +10,16 @@ class Message extends Model
 
     protected $table = 'messages';
     protected $fillable = ['body'];
-    protected $dates = 'deleted_at';
+    protected $dates = ['deleted_at'];
 
 
     //relations
     public function opinion(){
         return $this->belongsTo(Opinion::class);
     }
+
+    public function messagable(){
+        return $this->morpho();
+    }
+
 }

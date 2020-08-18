@@ -25,4 +25,8 @@ class Complaint extends Model
     public function complaintType(){
         return $this->belongsTo(ComplaintType::class);
     }
+
+    public function messages(){
+        return $this->morphMany(Message::class, 'messagable');
+    }
 }

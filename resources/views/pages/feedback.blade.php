@@ -1,4 +1,4 @@
-@extends('layouts.admin')
+{{-- @extends('layouts.admin')
 @section('styles')
 <style>
   .fa-trash-alt
@@ -13,11 +13,11 @@
 </style>
 @endsection
 
-@section('content')
+@section('content') --}}
 
 <body>
   {{-- @if(count($messages) > 0) --}}
-<div class="container">
+{{-- <div class="container">
   
   <div class="container mt-5 pt-5">
     <div class="row">
@@ -44,7 +44,7 @@
     
   </div>
   
-</div>
+</div> --}}
   {{-- @endforeach --}}
 
 </body>

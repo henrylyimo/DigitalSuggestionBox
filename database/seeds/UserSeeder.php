@@ -14,28 +14,25 @@ class UserSeeder extends Seeder
     {
         //admin
         $user = new User();
-        $user->name = 'Admin';
-        $user->email = 'Admin@gmail.com';
+        $user->name = 'Administrator';
+        $user->reg_no = '2017-04-00000';
         $user->password = bcrypt('admin');
         $user->save();
 
     //  secrtary
         $user = new User();
         $user->name = 'USAB manager';
-        $user->email = 'usab@gmail.com';
+        $user->reg_no = '2017-04-00001';
         $user->password = bcrypt('usab');
         $user->save();
 
 
     //   Student
         $user = new User();
-        $user->name = 'Henry';
-        $user->email = 'henry@gmail.com';
-        $user->password = bcrypt('coict2019');
+        $user->name = 'Lyimo, Henry Patrick';
+        $user->reg_no = '2017-04-01597';
+        $user->password = bcrypt('coict2020');
         $user->save();
-
-     
-
         
     }
 }

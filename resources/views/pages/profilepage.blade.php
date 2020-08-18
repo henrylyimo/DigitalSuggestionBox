@@ -69,14 +69,14 @@ margin-top: 5px
 							<div class="form-group row">
 								<label for="colFormLabelSm" class="col-sm-2 col-form-label ml-5">First name</label>
 								<div class="col-sm-6">
-									<input type="text" class="form-control form-control-lg" id="" placeholder="HENRY PATRICK">
+									<input type="text" class="form-control form-control-lg" id="" placeholder=" LYIMO HENRY PATRICK">
 								</div>
 							</div>
 
 							<div class="form-group row">
-								<label for="colFormLabelSm" class="col-sm-2 col-form-label ml-5">Surname</label>
+								<label for="colFormLabelSm" class="col-sm-2 col-form-label ml-5">Reg-No</label>
 								<div class="col-sm-6">
-									<input type="text" class="form-control form-control-lg" id="" placeholder="LYIMO">
+									<input type="text" class="form-control form-control-lg" id="" placeholder="2017-04-01597">
 								</div>
 							</div>
 

@@ -19,7 +19,6 @@ class CreateResolversTable extends Migration
             $table->String('professional');
             $table->String('email');
             $table->String('contact');
-            $table->String('role');
             $table->softdeletes();
             $table->timestamps();
         });
