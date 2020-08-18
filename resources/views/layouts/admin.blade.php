@@ -123,7 +123,7 @@
                             </li>
                         </div>
 
-                        @role('Students')
+    
                         <div class="container box-side">
                             <li class="nav-item">
                                 <a href="/profilepage" class="nav-link">
@@ -133,9 +133,9 @@
                                 </a>
                             </li>
                         </div>
-                        @endrole
 
-                        @role('Students')
+
+                    
                         <div class="container box-side">
                             <li class="nav-item">
                                 <a href="/complaint_form" class="nav-link">
@@ -145,10 +145,10 @@
                                 </a>
                             </li>
                         </div> 
-                        @endrole        
+       
 
                 <!---Student Challenge---->
-                @role('Secretary')
+            
                 <div class="container box-side">
                     <li class="nav-item has-treeview">
                         <a href="#" class="nav-link">
@@ -169,9 +169,9 @@
                         </ul>    
                     </li>
                 </div>
-                @endrole
+            
                 
-                @role('Students') 
+    
                 <div class="container box-side">
                     <li class="nav-item">
                         <a href="/opinion_form" class="nav-link">
@@ -181,10 +181,10 @@
                         </a>
                     </li>
                 </div>
-                @endrole
+
                     
                     <!--- Students Opinion---->
-                    @role('Secretary')
+    
                     <div class="container box-side">
                         <li class="nav-item has-treeview">
                             <a href="#" class="nav-link">
@@ -204,11 +204,11 @@
                             </ul>
                         </li>
                     </div>
-                    @endrole 
+ 
 
 
 
-                    @role('Students')
+                
                     <div class="container box-side">
                         <li class="nav-item ">
                             <a href="#" class="nav-link">
@@ -218,9 +218,9 @@
                             </a>
                         </li>
                     </div>
-                    @endrole
+                
 
-                    @role('Students')
+
                     <div class="container box-side">
                         <li class="nav-item ml-3">
                             <a href="/complaint_feedback" class="nav-link">
@@ -230,9 +230,9 @@
                             </a>
                         </li>
                     </div>
-                    @endrole
+        
 
-                    @role('Students')
+                
                     <div class="container box-side">
                         <li class="nav-item ml-3">
                             <a href="/opinion_feedback" class="nav-link">
@@ -242,9 +242,9 @@
                             </a>
                         </li>
                     </div>
-                    @endrole
+    
 
-                    @role('Secretary')
+
                     <div class="container box-side">
                         <li class="nav-item">
                             <a href="/resolver" class="nav-link">
@@ -254,9 +254,9 @@
                             </a>
                         </li>
                     </div>
-                    @endrole
+            
 
-                    @role('Secretary')
+            
                     <div class="container box-side">
                         <li class="nav-item">
                             <a href="/create_update" class="nav-link">
@@ -266,7 +266,7 @@
                             </a>
                         </li>
                     </div>
-                    @endrole
+        
 
 
 
@@ -281,7 +281,7 @@
                         </li>
                     </div>
                     
-                    @role('Secretary')
+                
                     <div class="container box-side">                      
                     <li class="nav-item has-treeview">
                         <a href="#" class="nav-link">
@@ -313,7 +313,7 @@
                         </ul>
                     </li>                   
                     </div>
-                    @endrole
+                    
                     
                     <div class="container box-side">
                     <li class="nav-item has-treeview">

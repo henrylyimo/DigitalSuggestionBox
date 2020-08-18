@@ -9,8 +9,8 @@ use App\Resolver;
 class ResolverController extends Controller
 {
     public function getResolver() {
-           $resolver = Resolver::all();
-           return view('pages.resolver',['resolvers' => $resolver]);
+           $resolvers = Resolver::all();
+           return view('pages.resolver',['resolvers' => $resolvers ]);
     }
     public function postresolver(Request $request)
     {

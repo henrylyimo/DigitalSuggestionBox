@@ -33,7 +33,7 @@ Route::get('/student_challange',['uses' => 'PagesController@student_challange'])
 Route::get('/feedback',['uses' => 'PagesController@feedback']);
 Route::get('/complaint_feedback',['uses' => 'PagesController@complaint_feedback']);
 Route::get('/opinion_feedback',['uses' => 'PagesController@opinion_feedback']);
-Route::get('/resolver',['uses' => 'PagesController@resolver']);
+// Route::get('/resolver',['uses' => 'PagesController@resolver']);
 
 
 //complaint 
@@ -46,7 +46,7 @@ Route::put('/updateReply',['uses' => 'OpinionController@updateReply']);
 
 //resolver
 Route::post('/postResolver',['uses' => 'ResolverController@postResolver']);
-Route::get('/getResolver',['uses' => 'ResolverController@getResolver']);
+Route::get('/resolver',['uses' => 'ResolverController@getResolver']);
 
 // //Message
 // Route::post('student_opinion/reply/{$id}',['uses' => 'MessageController@postMessage']);
