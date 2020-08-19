@@ -57,6 +57,10 @@ Route::post('/messageOpinion',['uses' => 'MessageController@postOpinionMessage']
 Route::post('/messageComplaint',['uses' => 'MessageController@postComplaintMessage']);
 // Route::get('get/{id}',['uses' => 'OpinionController@getOpinion']);
 
+// /Post Update
+Route::get('/create_update',['uses' => 'PagesController@create_update']);
+
+
 
 
 Route::get('/home', 'HomeController@index')->name('home');

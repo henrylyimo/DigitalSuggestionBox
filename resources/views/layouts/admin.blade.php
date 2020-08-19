@@ -63,24 +63,38 @@
       </form>
           </li>
             <!-- Messages Dropdown Menu -->
+            <li class="nav-item dropdown">
+                <a id="navbarDropdown" class="nav-link dropdown-toggle" style="color: black" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
+                    {{ Auth::user()->name }} <span class="caret"></span>
+                </a>
+
+                <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
+                    <a class="dropdown-item fas fa-sign-out-alt" href="{{ route('logout') }}"
+                       onclick="event.preventDefault();
+                                     document.getElementById('logout-form').submit();">
+                        {{ __('Logout') }}
+                    </a>
+
+                    <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
+                     @csrf
+                    </form>
+                </div>
+            </li>
 
             
              
-            <li class="nav-item">
+            {{-- <li class="nav-item">
             <div class="user-panel d-flex">
                 <div class="image">
                     <img src="{{ asset('/image/icon.png') }}" class="img-circle">
                     
                 </div>
-                <div class="info" aria-labelledby="dropdownMenuLink">
-                    <a href=" " class="d-block " >{{ Auth::user()->name }}</a>
-
- 
-                    
+                <div class="info name-info" aria-labelledby="dropdownMenuLink">
+                    <a href=" " class="d-block " >{{ Auth::user()->name }}</a>                   
                 </div>
                 
             </div>
-          </li> 
+          </li>  --}}
 
           <!-- Example single danger button -->
 
@@ -103,6 +117,7 @@
                     <!-- Add icons to the links using the .nav-icon class
                          with font-awesome or any other icon font library -->
 
+
                          <div class="container box1-side">
                             <li class="nav-item has-treeview menu-open ">
                                 <a href="/homepage" class="nav-link ">
@@ -111,7 +126,8 @@
                                     </p>
                                 </a>
                             </li>
-                        </div>  
+                        </div>
+ 
 
                         <div class="container box-side">
                             <li class="nav-item">
@@ -135,7 +151,7 @@
                         </div>
 
 
-                    
+                        @role('Admin')
                         <div class="container box-side">
                             <li class="nav-item">
                                 <a href="/complaint_form" class="nav-link">
@@ -145,6 +161,7 @@
                                 </a>
                             </li>
                         </div> 
+                        @endrole
        
 
                 <!---Student Challenge---->
@@ -171,7 +188,7 @@
                 </div>
             
                 
-    
+                @role('Admin')   
                 <div class="container box-side">
                     <li class="nav-item">
                         <a href="/opinion_form" class="nav-link">
@@ -181,6 +198,7 @@
                         </a>
                     </li>
                 </div>
+                @endrole
 
                     
                     <!--- Students Opinion---->
@@ -231,6 +249,8 @@
                         </li>
                     </div>
         
+
+                    @role('Students')
                     <div class="container box-side">
                         <li class="nav-item ml-3">
                             <a href="/opinion_feedback" class="nav-link">
@@ -240,6 +260,7 @@
                             </a>
                         </li>
                     </div>
+                    @endrole
     
 
 
@@ -253,21 +274,16 @@
                         </li>
                     </div>
             
-
-            @role('students')
                     <div class="container box-side">
                         <li class="nav-item">
                             <a href="/create_update" class="nav-link">
                                 <p>
-                                    Create News
+                                    Post Update
                                 </p>
                             </a>
                         </li>
                     </div>
-                @endrole
-        
-
-
+             
 
                 @role('students')
                     <div class="container box-side">
@@ -293,7 +309,7 @@
                     
                     
                     
-                    <div class="container box-side">
+                    {{-- <div class="container box-side">
                     <li class="nav-item has-treeview">
                         <a href="#" class="nav-link">
                             <i class="nav-icon fas fa-sign-out-alt"></i> 
@@ -315,7 +331,7 @@
                     </li>
                         </ul>
                     </li>
-                </div>
+                </div> --}}
                 </ul>
             </nav>
             <!-- /.sidebar-menu -->

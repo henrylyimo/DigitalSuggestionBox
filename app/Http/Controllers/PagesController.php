@@ -58,4 +58,8 @@ class PagesController extends Controller
         return view('pages.user');
     }
 
+    public function create_update() {
+        return view('pages.create_update');
+    }
+
 }

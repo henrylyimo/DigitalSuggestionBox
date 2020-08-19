@@ -151,6 +151,15 @@ body {
   color: whitesmoke;
 }
 
+.name-info
+{
+  color: black;
+}
+
+.name-info .d-block
+{
+  color: black;
+}
 
 
 

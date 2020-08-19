@@ -24,23 +24,29 @@
   {
     font-size: 50px;
     font-weight: .bold;
-  }
-/* .image-profile {
-	height: 130px;
-	width: 130px;
-	background-color: whitesmoke;
-	position: relative;
-	border-radius: 50%
+	}
+	.info .name-info
+{
+	color: black;
+	font-size: 50px;
+  font-weight: .bold;
 }
-.image2 {
-	height: 120px;
-	width: 120px;
-	position: absolute;
-	border-radius: 50%;
-	background-color: blueviolet;
-margin-left: 5px;
-margin-top: 5px
-} */
+.box
+{
+	border: 1px solid #C0C0C0;
+	border-radius: 5px;
+	font-size: 18px;
+	color: gray;
+	font-weight: bold;
+
+
+}
+.box .box1
+{
+	
+}
+
+
 
 </style>
 
@@ -54,12 +60,10 @@ margin-top: 5px
 							<div class=" col-md-2 user-img mt-3 mb-3">
 								<img src="{{ asset('/image/icon.png') }}" alt="" class="img-fluid ml-5">
 							</div>
-							<div class="col-md-8 mt-4 user-name">
-								<p >HENRY PATRICK LYIMO</p>
-							</div>  
-							{{-- <div class="col-md-2 mt-5 ">
-								<a href="" class="btn btn-outline-primary">Edit Profile</a>
-							</div>            --}}
+
+							<div class="info " aria-labelledby="dropdownMenuLink">
+								<p class="d-block name-info mt-4 ml-3"  >{{ Auth::user()->name }}</p>                   
+						</div>
 						</div>
 					</div>
 				</div>
@@ -67,30 +71,40 @@ margin-top: 5px
 					<div class="card-body">
 						<form action="">
 							<div class="form-group row">
-								<label for="colFormLabelSm" class="col-sm-2 col-form-label ml-5">First name</label>
+								<label for="colFormLabelSm" class="col-sm-2 col-form-label ml-5">Full name</label>
 								<div class="col-sm-6">
-									<input type="text" class="form-control form-control-lg" id="" placeholder=" LYIMO HENRY PATRICK">
+									<div class="box">
+										<p class="d-block box1 mt-2 ml-3 "  >{{ Auth::user()->name }}</p> 
+									</div>
+									{{-- <input type="text" class="form-control form-control-lg" id="" placeholder=" LYIMO HENRY PATRICK"> --}}
 								</div>
 							</div>
 
 							<div class="form-group row">
 								<label for="colFormLabelSm" class="col-sm-2 col-form-label ml-5">Reg-No</label>
 								<div class="col-sm-6">
-									<input type="text" class="form-control form-control-lg" id="" placeholder="2017-04-01597">
+									<div class="box">
+										<p class="d-block box1 mt-2 ml-3 "  >{{ Auth::user()->reg_no }}</p> 
+									</div>								 
+									{{-- <input type="text" class="form-control form-control-lg" id="" placeholder="2017-04-01597"> --}}
 								</div>
 							</div>
 
 							<div class="form-group row">
 								<label for="colFormLabelSm" class="col-sm-2 col-form-label ml-5">Course</label>
 								<div class="col-sm-6">
-									<input type="text" class="form-control form-control-lg" id="" placeholder="Bsc With Computer Science">
+									<div class="box">
+										<p class="d-block box1 mt-2 ml-3 "  >{{ Auth::user()->course}}</p> 
+									</div>	
+									
+									{{-- <input type="text" class="form-control form-control-lg" id="" placeholder="Bsc With Computer Science"> --}}
 								</div>
 							</div>
 
 							<div class="form-group row">
 								<label for="colFormLabelSm" class="col-sm-2 col-form-label ml-5">Email</label>
 								<div class="col-sm-6">
-									<input type="text" class="form-control form-control-lg" id="" placeholder="abc@abcd.com">
+									<input type="text" class="form-control form-control-lg" id="" placeholder="abc@abcd.com" aria-describedby="emailHelp">
 								</div>
 							</div>
 
