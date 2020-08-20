@@ -81,7 +81,8 @@
   
               <div class="col-md-5">
                 <div class="form-group">
-                <input type="text" class="form-control" name="contact" value="{{ $opinionType->contact }}" placeholder="eg +255 765 63 173" required>
+                <input type="text" class="form-control" name="contact" value="{{ $opinionType->contact }}" placeholder="eg +255 765 63 173" >
+                <small id="" class="form-text text-muted">It is an option to fill it.</small>
                 </div>
               </div>
             </div>

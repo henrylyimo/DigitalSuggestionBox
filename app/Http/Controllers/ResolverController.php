@@ -3,7 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use Illuminate\support\Facades\Validator;
+use Illuminate\Support\Facades\Validator;
 use App\Resolver;
 
 class ResolverController extends Controller
@@ -31,23 +31,33 @@ class ResolverController extends Controller
         $resolver->save();
 
         return back();
-    }
 
-    public function editResolver(Request $request, $id)
+        return redirect('/resolver')->with('success', 'Resolver Added successfully');
+    }
+    public function deleteResolver($id)
     {
         $resolver = Resolver::find($id);
 
-        $resolver->update([
-            'name'=> $request->name,
-            'professional'=> $request->professional,
-            'email'=> $request->email,
-            'contact'=> $request->contact
-        
-        ]);
-        
+        $resolver->delete();
 
-        return redirect('/resolver')->with('message', 'Resolver Update successfully');
-
+        return redirect('/resolver')->with('danger', 'Resolver Deleted successfully');
     }
+
+    // public function editResolver(Request $request, $id)
+    // {
+    //     $resolver = Resolver::find($id);
+
+    //     $resolver->update([
+    //         'name'=> $request->name,
+    //         'professional'=> $request->professional,
+    //         'email'=> $request->email,
+    //         'contact'=> $request->contact
+        
+    //     ]);
+        
+
+    //     return redirect('/resolver')->with('message', 'Resolver Update successfully');
+
+    // }
 
 }

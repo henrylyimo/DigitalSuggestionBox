@@ -27,11 +27,22 @@ class ComplaintController extends Controller
 
        $complaint = new Complaint;
        $complaint->complaint_type_id = $request->input('category');
-       $complaint->contact_no = $request->input('contact');
+       $complaint->contact_no = '';
        $complaint->complaint = $request->input('complaint');
        $complaint->solution = $request->input('solution');
        $complaint->save();
 
        return back();
     }
+
+    public function deleteComplaint($id)
+    {
+        $complaint = Complaint::find($id);
+
+        $complaint->delete();
+
+        return redirect('/complaint')->with('danger', 'Resolcompalint Deleted successfully');
+    }
+
+
 }

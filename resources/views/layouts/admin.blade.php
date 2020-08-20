@@ -49,7 +49,7 @@
             </li>
             <a class="navbar-brand d-flex" href="{{ url('/') }}">
                 <div><img src="{{ asset('/image/logo.png') }}" style="height: 40px;" class=""></div>
-                <div class="" style="color: #141f1f">SuggestionBox</div>
+                <div class="" style="color: #141f1f"><strong>Student Opinions and Challenges Information System</strong></div>
             </a>
         </div>
         
@@ -65,13 +65,15 @@
             <!-- Messages Dropdown Menu -->
             <li class="nav-item dropdown">
                 <a id="navbarDropdown" class="nav-link dropdown-toggle" style="color: black" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
-                    {{ Auth::user()->name }} <span class="caret"></span>
+                   <strong> {{ Auth::user()->name }}</strong><span class="caret"></span>
                 </a>
 
                 <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
-                    <a class="dropdown-item fas fa-sign-out-alt" href="{{ route('logout') }}"
+                    <a class="dropdown-item " href="/profilepage"> <i class="far fa-user pl-1"></i>Profile   </a>
+                       
+                    <a class="dropdown-item " href="{{ route('logout') }}"
                        onclick="event.preventDefault();
-                                     document.getElementById('logout-form').submit();">
+                                     document.getElementById('logout-form').submit();"><i class="far fa-sign-in"></i>
                         {{ __('Logout') }}
                     </a>
 
@@ -80,21 +82,6 @@
                     </form>
                 </div>
             </li>
-
-            
-             
-            {{-- <li class="nav-item">
-            <div class="user-panel d-flex">
-                <div class="image">
-                    <img src="{{ asset('/image/icon.png') }}" class="img-circle">
-                    
-                </div>
-                <div class="info name-info" aria-labelledby="dropdownMenuLink">
-                    <a href=" " class="d-block " >{{ Auth::user()->name }}</a>                   
-                </div>
-                
-            </div>
-          </li>  --}}
 
           <!-- Example single danger button -->
 
@@ -117,7 +104,7 @@
                     <!-- Add icons to the links using the .nav-icon class
                          with font-awesome or any other icon font library -->
 
-
+                         
                          <div class="container box1-side">
                             <li class="nav-item has-treeview menu-open ">
                                 <a href="/homepage" class="nav-link ">
@@ -129,6 +116,7 @@
                         </div>
  
 
+                        
                         <div class="container box-side">
                             <li class="nav-item">
                                 <a href="/update" class="nav-link">
@@ -138,9 +126,10 @@
                                 </a> 
                             </li>
                         </div>
+                       
 
     
-                        <div class="container box-side">
+                        {{-- <div class="container box-side">
                             <li class="nav-item">
                                 <a href="/profilepage" class="nav-link">
                                     <p>
@@ -148,10 +137,10 @@
                                     </p>
                                 </a>
                             </li>
-                        </div>
+                        </div> --}}
 
 
-                        @role('Admin')
+                        @role('Students')
                         <div class="container box-side">
                             <li class="nav-item">
                                 <a href="/complaint_form" class="nav-link">
@@ -165,7 +154,8 @@
        
 
                 <!---Student Challenge---->
-            
+                
+                @role('Students')           
                 <div class="container box-side">
                     <li class="nav-item has-treeview">
                         <a href="#" class="nav-link">
@@ -186,9 +176,10 @@
                         </ul>    
                     </li>
                 </div>
+                @endrole
             
                 
-                @role('Admin')   
+                @role('Students')   
                 <div class="container box-side">
                     <li class="nav-item">
                         <a href="/opinion_form" class="nav-link">
@@ -199,10 +190,10 @@
                     </li>
                 </div>
                 @endrole
+     
+                    <!--- Students Opinion---->
 
                     
-                    <!--- Students Opinion---->
-    
                     <div class="container box-side">
                         <li class="nav-item has-treeview">
                             <a href="#" class="nav-link">
@@ -222,11 +213,9 @@
                             </ul>
                         </li>
                     </div>
+                   
  
-
-
-
-                
+                    @role('Students')
                     <div class="container box-side">
                         <li class="nav-item ">
                             <a href="#" class="nav-link">
@@ -236,9 +225,10 @@
                             </a>
                         </li>
                     </div>
+                    @endrole
                 
 
-
+                    @role('Students')
                     <div class="container box-side">
                         <li class="nav-item ml-3">
                             <a href="/complaint_feedback" class="nav-link">
@@ -248,8 +238,9 @@
                             </a>
                         </li>
                     </div>
+                    @endrole
         
-
+        
                     @role('Students')
                     <div class="container box-side">
                         <li class="nav-item ml-3">
@@ -263,7 +254,7 @@
                     @endrole
     
 
-
+                    @role('Secretary')
                     <div class="container box-side">
                         <li class="nav-item">
                             <a href="/resolver" class="nav-link">
@@ -273,7 +264,21 @@
                             </a>
                         </li>
                     </div>
+                    @endrole
+                    @role('Admin')
+                    <div class="container box-side">
+                        <li class="nav-item">
+                            <a href="/resolver" class="nav-link">
+                                <p>
+                                    Resolver
+                                </p>
+                            </a>
+                        </li>
+                    </div>
+                    @endrole
             
+
+                    @role('Secretary')
                     <div class="container box-side">
                         <li class="nav-item">
                             <a href="/create_update" class="nav-link">
@@ -283,9 +288,10 @@
                             </a>
                         </li>
                     </div>
+                    @endrole
              
 
-                @role('students')
+                    @role('Students')
                     <div class="container box-side">
                         <li class="nav-item">
                             <a href="/about" class="nav-link">
@@ -295,8 +301,22 @@
                             </a>
                         </li>
                     </div>
-                   @endrole
+                    @endrole
+                    @role('Secretary')
+                    <div class="container box-side">
+                        <li class="nav-item">
+                            <a href="/about" class="nav-link">
+                                <p>
+                                    About
+                                </p>
+                            </a>
+                        </li>
+                    </div>
+                    @endrole
+                  
+                
 
+                    @role('Admin')
                    <div class="container box-side">
                     <li class="nav-item">
                         <a href="/user" class="nav-link">
@@ -305,33 +325,9 @@
                             </p>
                         </a>
                     </li>
-                </div>
-                    
-                    
-                    
-                    {{-- <div class="container box-side">
-                    <li class="nav-item has-treeview">
-                        <a href="#" class="nav-link">
-                            <i class="nav-icon fas fa-sign-out-alt"></i> 
-                            <p>
-                                LOGOUT
-                            </p>
-                        </a>
-                        <ul class="nav nav-treeview">
-                    <li class="nav-link">
-                        <a class="far fa-circle nav-icon " style="color: black" href="{{ route('logout') }}"
-                           onclick="event.preventDefault();
-                                                     document.getElementById('logout-form').submit();">
-                               {{ __('  Logout') }}
-                        </a>
-
-                        <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
-                            @csrf
-                        </form>
-                    </li>
-                        </ul>
-                    </li>
-                </div> --}}
+                   </div>
+                   @endrole
+                
                 </ul>
             </nav>
             <!-- /.sidebar-menu -->
@@ -346,10 +342,6 @@
 
     </div>
     <!-- /.content-wrapper -->
-    <footer class="main-footer" style="position:fixed;">
-        <strong p-3>University of Dar es salaam Copyright &copy; 2020 All rights reserved.</strong>
-        
-    </footer>
 
     <!-- Control Sidebar -->
     <aside class="control-sidebar control-sidebar-dark">

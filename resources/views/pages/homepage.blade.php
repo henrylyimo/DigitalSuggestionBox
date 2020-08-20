@@ -7,32 +7,37 @@
   {
     background-color: #e6ffff;
   }
-  
-  .user-img
+  .box-home h2
   {
-    height: 100px;
-    width: 100px;
-    border-radius: 50%;
-  }
-  .user-img .img-fluid
-  {
-    height: 100px;
-    width: 100px;
-    border-radius: 50%;
+    font-weight: bold;
+    font-family: Arial, Helvetica, sans-serif;
+    font-style: italic;
   }
 
-  .user-name
+  .box-home h4
   {
-    font-size: 50px;
-    font-weight: .bold;
+    font-weight: 700;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 20px;
+ 
   }
-  .card-user .img-fluid
+  .box-home1 h5
   {
-    color: white;
-    height: 70px;
-    width: 70px;
-    background-color: white;
+    font-weight: 700;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 17px;
   }
+  .login-img
+     {
+         width: 80%;
+         margin-top: 150px;
+         padding-left: 50px;
+         size: 70
+         
+     }
+
+  
+ 
 </style> 
 
 
@@ -46,47 +51,30 @@
 <body>
     <div class="container ">
       <div class="container pt-3 mt-5">
-        <div class="card mt-5 ">
-          <div class="row">
-            <div class=" col-md-2 user-img mt-3 mb-3">
-              <img src="{{ asset('/image/icon.png') }}" alt="" class="img-fluid ml-5">
-            </div>
-            <div class="col-md-8 mt-4 user-name">
-              <p >HENRY PATRICK LYIMO</p>
-            </div>  
-            <div class="col-md-2 mt-5 ">
-              <a href="" class="btn btn-outline-primary">Edit Profile</a>
-            </div>           
-          </div>
-        </div>
-      </div>
-
-      <div class="container mt-5">
         <div class="row">
-          <div class="col-md-4">
-            <div class="card text-white bg-primary mb-3" style="max-width: 18rem;">
-              {{-- <div class="card-header">Header</div> --}}
-              <div class="card-body">
-                <div class="row">
-                  <div class="col-md-8">
-                    <p>150</p>
-                    <p>Total Complaint</p>
-                  </div>
-                  <div class="col-md-4 card-user">
-                    <img src="{{ asset('/image/1.png') }}" alt="" class="img-fluid">
-                  </div>
-                </div>
-                {{-- <h5 class="card-title" style="font-weight: 800">Primary card title</h5> --}}
-                {{-- <div class="card-footer text-muted">
-                  2 days ago
-                </div> --}}
+          <div class="col-md-7">
+            <div class="row box-home pt-4">
+              <h2 >Welcome to Students opinions and challenges information system</h2 >
+              <h4 class="pt-4">What Platform does?</h4>
+              <p>Students opinion and challenges information system allow students to complain about challanges their facing in University of Dar es Salaam, <br>Also allow students to provide opinions about positive things that may be implemented in University of Dar es Salaam. </p> 
+               
+              <div class="box-home1">
+                <h5 class="pl-4">Students</h5>
+                <p class="pl-5">.Compaint about challanges facing in University of Dar es Salaam</p>
+                <p class="pl-5">.Provide opinion about positive things </p>
               </div>
+
+              <div class="box-home1">
+                <h5 class="pl-4">UDSM staff on Duty</h5>
+                <p class="pl-5">.View compalaint and opinion of students</p>
+                <p class="pl-5">.Provide feedback to the students</p>
+              </div>
+
             </div>
           </div>
-          <div class="col-md-3"></div>
-          <div class="col-md-3"></div>
-          <div class="col-md-3"></div>
-
+          <div class="col-md-5">
+            <img src="{{ asset('/image/box-image.png') }}" alt="" class="login-img">
+          </div>
         </div>
       </div>
     </div> 

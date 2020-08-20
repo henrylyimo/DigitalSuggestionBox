@@ -21,8 +21,8 @@ class MessageController extends Controller
    if ($validator->fails()) return response()->json(['error'=>$validator->error(),],404);
 
     $opinion = Opinion::find($request->input('opinionId'));
-
-       $message = new Message;
+       $message = new Message();
+      //  dd($message);
        $message->body = $request->input('body');
        $opinion->messages()->save($message);
 
@@ -48,9 +48,7 @@ class MessageController extends Controller
     }
 
 
-    public function getComplaintsMessage() {
-       return Messages::where('messagable_type', 'App\Complaint');
-    }
+   // 
 
   
 }

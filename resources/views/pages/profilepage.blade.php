@@ -91,7 +91,7 @@
 							</div>
 
 							<div class="form-group row">
-								<label for="colFormLabelSm" class="col-sm-2 col-form-label ml-5">Course</label>
+								<label for="colFormLabelSm" class="col-sm-2 col-form-label ml-5">Course/Role</label>
 								<div class="col-sm-6">
 									<div class="box">
 										<p class="d-block box1 mt-2 ml-3 "  >{{ Auth::user()->course}}</p> 
@@ -99,53 +99,8 @@
 									
 									{{-- <input type="text" class="form-control form-control-lg" id="" placeholder="Bsc With Computer Science"> --}}
 								</div>
-							</div>
-
-							<div class="form-group row">
-								<label for="colFormLabelSm" class="col-sm-2 col-form-label ml-5">Email</label>
-								<div class="col-sm-6">
-									<input type="text" class="form-control form-control-lg" id="" placeholder="abc@abcd.com" aria-describedby="emailHelp">
-								</div>
-							</div>
-
-							<div class="form-group row">
-								<label for="colFormLabelSm" class="col-sm-2 col-form-label ml-5">Contact_no</label>
-								<div class="col-sm-6">
-									<input type="text" class="form-control form-control-lg" id="" placeholder="">
-								</div>
-							</div>
-
-							<div class="form-group row">
-								<label for="colFormLabelSm" class="col-sm-2 col-form-label ml-5">City/Town</label>
-								<div class="col-sm-6">
-									<input type="text" class="form-control form-control-lg" id="" placeholder="">
-								</div>
-							</div>
-
-							<div class="form-group row">
-								<label for="colFormLabelSm" class="col-sm-2 col-form-label ml-5">Old Password</label>
-								<div class="col-sm-6">
-									<input type="text" class="form-control form-control-lg"  placeholder="">
-								</div>
-							</div>
-
-							<div class="form-group row">
-								<label for="colFormLabelSm" class="col-sm-2 col-form-label ml-5">New password</label>
-								<div class="col-sm-6">
-									<input type="text" class="form-control form-control-lg"  placeholder="">
-								</div>
 							</div>	
 						</form>
-						<div class="row">
-							<div class="col-md-9"></div>
-							<div class="col-md-1">
-								<a href="" class="btn btn-primary ml-4">Edit</a>
-							</div>
-							<div class="col-md-2">
-								<a href="" class="btn btn-primary">Save changes</a>
-							</div>
-						</div>
-					</div>
 				</div>
 			</div>
 

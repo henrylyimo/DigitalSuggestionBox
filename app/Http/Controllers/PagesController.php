@@ -4,7 +4,8 @@ namespace App\Http\Controllers;
 use App\OpinionType;
 use App\ComplaintType;
 use App\Message;
-
+use App\User;
+use App\Update;
 
 use Illuminate\Http\Request;
 
@@ -45,17 +46,23 @@ class PagesController extends Controller
         return view('pages.feedback');
     }
     public function complaint_feedback() {
-        $messages = Message::where('messagable_type', 'App\Complaint')->get();
+        $messages = Message::where('messagable_type', 'App\Complaint')->orderBy('id','desc')->get();
         return view('pages.complaint_feedback',['messages' => $messages]);
     }
     public function opinion_feedback() {
-        return view('pages.opinion_feedback');
+        $messages = Message::where('messagable_type', 'App\Opinion')->orderBy('id','desc')->get();
+        return view('pages.opinion_feedback',['messages' => $messages]);
     }
     public function resolver() {
         return view('pages.resolver');
     }
     public function user() {
-        return view('pages.user');
+
+        $users = User::all();
+        foreach($users as $user){
+            $user->roles;
+        }
+        return view('pages.user')->with('users',$users);
     }
 
     public function create_update() {

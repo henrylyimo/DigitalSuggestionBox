@@ -81,7 +81,8 @@
   
               <div class="col-md-5">
                 <div class="form-group">
-                <input type="text" class="form-control" value="{{ $complaintType->contact_no }}" name="contact" placeholder="Phone no:" required>
+                <input type="text" class="form-control" value="{{ $complaintType->contact_no }}" name="contact" placeholder="Phone no:" >
+                <small id="" class="form-text text-muted">It is an option to fill it.</small>
                 </div>
               </div>
             </div>

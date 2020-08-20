@@ -16,24 +16,103 @@ class UserSeeder extends Seeder
         $user = new User();
         $user->name = 'Administrator';
         $user->reg_no = '2017-04-00000';
-        $user->course = 'Bsc with Computer Science';
-        $user->password = bcrypt('admin');
+        $user->course = 'Admin of the system';
+        $user->password = bcrypt('coict2020');
         $user->save();
 
     //  secrtary
         $user = new User();
-        $user->name = 'USAB manager';
+        $user->name = 'Dean of Students';
         $user->reg_no = '2017-04-00001';
-        $user->course = 'Bsc with Computer Science';
-        $user->password = bcrypt('usab');
+        $user->course = 'Dean of stusent';
+        $user->password = bcrypt('coict2020');
         $user->save();
+
+        
 
 
     //   Student
         $user = new User();
-        $user->name = 'HENRY PATRICK LYIMO';
+        $user->name = 'PATRICK ANORD';
+        $user->reg_no = '2017-04-01594';
+        $user->course = 'Bsc with Computer Science';
+        $user->password = bcrypt('coict2020');
+        $user->save();
+
+        $user = new User();
+        $user->name = 'MSIRU MICHAEL';
+        $user->reg_no = '2017-04-01595';
+        $user->course = 'Bsc with Computer Science';
+        $user->password = bcrypt('coict2020');
+        $user->save();
+
+        $user = new User();
+        $user->name = 'KIWANGO ANOLD';
+        $user->reg_no = '2017-04-01596';
+        $user->course = 'Bsc with Computer Science';
+        $user->password = bcrypt('coict2020');
+        $user->save();
+
+        $user = new User();
+        $user->name = 'LYIMO PATRICK HENRY ';
         $user->reg_no = '2017-04-01597';
         $user->course = 'Bsc with Computer Science';
+        $user->password = bcrypt('coict2020');
+        $user->save();
+
+        $user = new User();
+        $user->name = 'MEENA NANCY FREDRICK';
+        $user->reg_no = '2017-04-01550';
+        $user->course = 'Bsc in Computer Science';
+        $user->password = bcrypt('coict2020');
+        $user->save();
+
+        $user = new User();
+        $user->name = 'MKOMAJI ALOYCE';
+        $user->reg_no = '2017-04-01551';
+        $user->course = 'Bsc in Computer Science';
+        $user->password = bcrypt('coict2020');
+        $user->save();
+
+        $user = new User();
+        $user->name = 'MAFTAH ALLY WAZIRI';
+        $user->reg_no = '2017-04-01552';
+        $user->course = 'Bsc in Computer Science';
+        $user->password = bcrypt('coict2020');
+        $user->save();
+
+        $user = new User();
+        $user->name = 'MNULI SHABAN ALLY';
+        $user->reg_no = '2017-04-01553';
+        $user->course = 'Bsc in Computer Engineering';
+        $user->password = bcrypt('coict2020');
+        $user->save();
+
+        $user = new User();
+        $user->name = 'MUJUMBA FREDRICK';
+        $user->reg_no = '2017-04-01554';
+        $user->course = 'Bsc in Computer Engineering';
+        $user->password = bcrypt('coict2020');
+        $user->save();
+
+        $user = new User();
+        $user->name = 'PAUL AMOSI';
+        $user->reg_no = '2017-04-01555';
+        $user->course = 'Bsc in Computer Engineering';
+        $user->password = bcrypt('coict2020');
+        $user->save();
+
+        $user = new User();
+        $user->name = 'LYIMO NANCY PATRICK';
+        $user->reg_no = '2017-04-01556';
+        $user->course = 'Bsc in telecommunication';
+        $user->password = bcrypt('coict2020');
+        $user->save();
+
+        $user = new User();
+        $user->name = 'HENRY PATRICK LYIMO';
+        $user->reg_no = '2017-04-01557';
+        $user->course = 'Bsc in telecommunication';
         $user->password = bcrypt('coict2020');
         $user->save();
         

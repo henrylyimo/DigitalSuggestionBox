@@ -17,7 +17,7 @@ Route::get('/', function () {
 
 
 
-Auth::routes();
+Auth::routes(['register'=>false]);
 
 
 //pages controller
@@ -34,6 +34,7 @@ Route::get('/feedback',['uses' => 'PagesController@feedback']);
 Route::get('/complaint_feedback',['uses' => 'PagesController@complaint_feedback']);
 Route::get('/opinion_feedback',['uses' => 'PagesController@opinion_feedback']);
 Route::get('/user',['uses' => 'PagesController@user']);
+Route::get('/create_update',['uses' => 'PagesController@create_update']);
 
 
 //complaint 
@@ -50,15 +51,26 @@ Route::put('/updateReply',['uses' => 'OpinionController@updateReply']);
 Route::post('/postResolver',['uses' => 'ResolverController@postResolver']);
 Route::get('/resolver',['uses' => 'ResolverController@getResolver']);
 Route::post('/resolver/{id}',['uses' => 'ResolverController@editResolver']);
+Route::delete('/resolver/{id}',['uses' => 'ResolverController@deleteResolver']);
 
 
 // //Message
 Route::post('/messageOpinion',['uses' => 'MessageController@postOpinionMessage']);
 Route::post('/messageComplaint',['uses' => 'MessageController@postComplaintMessage']);
+Route::post('/messageOpinion',['uses' => 'MessageController@postOpinionMessage']);
+
 // Route::get('get/{id}',['uses' => 'OpinionController@getOpinion']);
 
-// /Post Update
-Route::get('/create_update',['uses' => 'PagesController@create_update']);
+// User
+Route::post('register_user',['uses' => 'UserController@postUser']);
+Route::delete('/user/{id}',['uses' => 'UserController@deleteUser']);
+
+
+// Create News
+Route::post('/postCreateNews',['uses' => 'Create_newsController@postCreateNews']);
+Route::get('/update',['uses' => 'Create_newsController@getCreateNews']);
+
+
 
 
 

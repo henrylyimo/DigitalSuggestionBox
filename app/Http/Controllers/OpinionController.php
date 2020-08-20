@@ -27,7 +27,7 @@ class OpinionController extends Controller
 
        $opinion = new Opinion;
        $opinion->opinion_type_id = $request->input('category');
-       $opinion->contact_no = $request->input('contact');
+       $opinion->contact_no = '';
        $opinion->body = $request->input('opinion');
        $opinion->reply = '';
        $opinion->save();

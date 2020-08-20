@@ -19,3 +19,5 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
 
 
 Route::post('/reply',['uses' => 'MessageController@postMessage']);
+
+Route::post('register_user/{roleId}',['uses' => 'UserController@postUser']);

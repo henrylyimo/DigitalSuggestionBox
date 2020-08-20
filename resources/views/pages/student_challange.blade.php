@@ -61,8 +61,13 @@
             </div>
             <div class="col-md-2 ml-auto">
               <div class="row">
-                <div><a href="#" class="btn btn-transparent"><i class="fas fa-trash-alt"></i></a></div> <br>
-                <div><a href="#" class="open-Dialog btn btn-transparent" data-toggle="modal" data-target="#replyModal" data-id={{$complaint->id}}><i class="fas fa-reply" ></i></a></div> 
+                <form class="d-inline" action="{{ url('student_challange/'.$complaint->id ) }}" method="post">
+                  @csrf
+                  @method('DELETE')
+                  <button type="submit" class="btn btn-transaparent"><i class="fas fa-trash-alt"></i></button>
+                </form> <br>
+                <div>
+                  <a href="#" class="open-Dialog btn btn-transparent" data-toggle="modal" data-target="#replyModal" data-id={{$complaint->id}}><i class="fas fa-reply" ></i></a></div> 
               </div>
             </div>
           </div>
@@ -70,7 +75,20 @@
       </div>
       @endforeach
       @else 
-       <p>no complaint</p>
+       <div class="container mt-5 pt-5">
+         <div class="row">
+           <div class="col-md-4"></div>
+           <div class="col-md-4">
+            <div class="card w-75 bg-danger">
+              <div class="card-body">
+                <h5 class="card-title">NO COMPLAINT RIGHT NOW</h5>
+              </div>
+            </div>
+           </div>
+           <div class="col-md-4"></div>
+         </div>
+        
+       </div>
       @endif
     </div>
   

@@ -37,5 +37,7 @@ class AppServiceProvider extends ServiceProvider
             $complaintTypes = ComplaintType::all();
             $view->with('complaintTypes' ,$complaintTypes);
         });
+
+        
     }
 }

@@ -26,7 +26,7 @@
             <div class="container">
                 <a class="navbar-brand d-flex" href="{{ url('/') }}">
                     <div><img src="{{ asset('/image/logo.png') }}" style="height: 40px; border-right:1px solid black;" class="pr-4"></div>
-                    <div class="pl-3">SuggestionBox</div>
+                    <div class="pl-3">Students opinion and challenges information system</div>
                 </a>
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="{{ __('Toggle navigation') }}">
                     <span class="navbar-toggler-icon"></span>
@@ -43,11 +43,11 @@
                         <!-- Authentication Links -->
                         @guest
                             <li class="nav-item">
-                                <a class="nav-link" href="{{ route('login') }}">{{ __('Login') }}</a>
+                                <a class="nav-link" href="{{ route('login') }}"></a>
                             </li>
                             @if (Route::has('register'))
                                 <li class="nav-item">
-                                    <a class="nav-link" href="{{ route('register') }}">{{ __('Register') }}</a>
+                                    <a class="nav-link" href="{{ route('register') }}"></a>
                                 </li>
                             @endif
                         @else

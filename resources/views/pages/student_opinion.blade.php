@@ -35,17 +35,16 @@
 
       <div class="row">
 
+
             @foreach ($opinions as $opinion)
-                
-        <div class="col-md-6" id="accordion">
+        <div class="col-md-2"></div>
+        <div class="col-md-8" id="accordion">
           <div class="card">
             <div class="card-body">
             <p>{{ $opinion->body }}</p>
               <div class="row">
                 <div class="col-md-9"></div>
-                <div class="col-md-3  ">
-                  <button class="btn btn-outline-primary ml-auto">Read more...</button>
-                </div>
+  
               </div>
               <div class="row">
                 <div class="col-md-10">
@@ -62,10 +61,8 @@
                 <div class="col-md-2 ml-auto">
                   <div class="row">
                     <div><a href="#" class="btn btn-transparent"><i class="fas fa-trash-alt"></i></a></div> <br>
-                  <div><a href="#" class="open-RequestDialog btn btn-transparent"><i class="fas fa-reply" data-toggle="modal"data-reply="" data-target="#replyModal"></i></a></div> 
-                  {{-- <a href="/get" class="btn btn-link" id="{{ $opinion->id }}" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-                      <i class="fas fa-reply"></i>
-                  </a> --}}
+                  <div>
+                    <a href="#" class="open-Dialog btn btn-transparent" data-toggle="modal" data-target="#replyModal" data-id='{{ $opinion->id }}'><i class="fas fa-reply" ></i></a></div> 
                   </div>
                 </div>
               </div>
@@ -95,10 +92,24 @@
             </div>
           </div>
         </div>
+        <div class="col-md-2"></div>
      
         @endforeach
 @else 
- <p>no opinion</p>
+<div class="container mt-5 pt-5">
+  <div class="row">
+    <div class="col-md-4"></div>
+    <div class="col-md-4">
+     <div class="card w-75 bg-danger">
+       <div class="card-body">
+         <h5 class="card-title">NO OPONION RIGHT NOW</h5>
+       </div>
+     </div>
+    </div>
+    <div class="col-md-4"></div>
+  </div>
+ 
+</div>
  @endif
 
       </div>
@@ -118,42 +129,36 @@
         </div>
         
         <div class="modal-body">
-          <form action="">
+
+          <form action="/messageOpinion" method="POST">
+            @csrf
             <div class="form-group">
+              <input type="text" id='opinionId' name="opinionId" hidden>
               <label for="body"></label>
               <textarea class="form-control" name="body" id="body" cols="30" rows="10"> </textarea>
             </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+              <button type="submit" class="btn btn-primary">Send</button>
+            </div>
           </form>
         </div>
-        <div class="modal-footer">
-          <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-          <button type="button" class="btn btn-primary">Send</button>
-        </div>
+        
       </div>
     </div>
-  </div>  
+  </div>
   
 </body>
 
 
     
 @endsection
+@section('scripts')
 <script>
-    // $(document).on("click", ".open-RequestDialog", function () {
-    //  var myRequestId = $(this).data('id');
-    //  console.log(myRequestId);
-    //  $(".modal-body #replyId").val( myRequestId );
-     // As pointed out in comments, 
-     // it is unnecessary to have to manually call the modal.
-     // $('#addBookDialog').modal('show');
-
-//      $('#replyModal').on('show.bs.modal',function(event){
-//        var button = $(event.relatedTarget)
-//        var reply =button.data('reply')
-
-//        var modal =$(this)
-//        modal.find('#editForm').attr('action','edit/reply/'+ reply['id'])
-//        modal.find('.replyNo').text(reply[number])
-//      }
-// });
-</script>
+ $(document).on("click", ".open-Dialog", function(){
+var id = $(this).data('id');
+console.log(id);
+$(".modal-body #opinionId").val(id);
+ });   
+</script>  
+@endsection
