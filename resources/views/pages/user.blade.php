@@ -34,8 +34,8 @@
 
           <th scope="col">Name</th>
           <th scope="col">Reg-no</th>
-          <th scope="col">Course</th>
-          <th scope="col">Role</th>
+          <th scope="col">Course/Role</th>
+          <th scope="col">UserRole</th>
           <th scope="col">Action</th>  
         </tr>
       </thead>
@@ -78,7 +78,14 @@
         <div class="modal-body">
         <form method="post" action="register_user">
             @csrf
-           
+            {{-- <div>
+              @if($errors->any())
+              <div class="alert alert-danger">
+                <ul>
+                  @foreach($error->all()as $error)
+                </ul>
+              </div>
+            </div> --}}
             <div class="form-group row">
               <label for="colFormLabelSm" class="col-sm-2 col-form-label ml-3">Name</label>
               <div class="col-sm-7">

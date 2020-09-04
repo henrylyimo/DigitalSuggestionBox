@@ -60,14 +60,14 @@
                
               <div class="box-home1">
                 <h5 class="pl-4">Students</h5>
-                <p class="pl-5">.Compaint about challanges facing in University of Dar es Salaam</p>
-                <p class="pl-5">.Provide opinion about positive things </p>
+                <p class="pl-5">Compaint about challanges facing in University of Dar es Salaam</p>
+                <p class="pl-5">Provide opinion about positive things </p>
               </div>
 
               <div class="box-home1">
-                <h5 class="pl-4">UDSM staff on Duty</h5>
-                <p class="pl-5">.View compalaint and opinion of students</p>
-                <p class="pl-5">.Provide feedback to the students</p>
+                <h5 class="pl-4">Dean of Student</h5>
+                <p class="pl-5">View compalaint and opinion of students</p>
+                <p class="pl-5">Provide feedback to the students</p>
               </div>
 
             </div>

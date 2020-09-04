@@ -117,7 +117,7 @@
  
 
                         
-                        <div class="container box-side">
+                        {{-- <div class="container box-side">
                             <li class="nav-item">
                                 <a href="/update" class="nav-link">
                                     <p>
@@ -125,7 +125,7 @@
                                     </p>
                                 </a> 
                             </li>
-                        </div>
+                        </div> --}}
                        
 
     
@@ -155,7 +155,7 @@
 
                 <!---Student Challenge---->
                 
-                @role('Students')           
+                @role('Secretary')          
                 <div class="container box-side">
                     <li class="nav-item has-treeview">
                         <a href="#" class="nav-link">
@@ -193,7 +193,7 @@
      
                     <!--- Students Opinion---->
 
-                    
+                    @role('Secretary')
                     <div class="container box-side">
                         <li class="nav-item has-treeview">
                             <a href="#" class="nav-link">
@@ -213,6 +213,7 @@
                             </ul>
                         </li>
                     </div>
+                    @endrole
                    
  
                     @role('Students')

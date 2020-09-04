@@ -19,6 +19,7 @@ class UserSeeder extends Seeder
         $user->course = 'Admin of the system';
         $user->password = bcrypt('coict2020');
         $user->save();
+        $user->assignRole('Admin');
 
     //  secrtary
         $user = new User();
@@ -27,6 +28,8 @@ class UserSeeder extends Seeder
         $user->course = 'Dean of stusent';
         $user->password = bcrypt('coict2020');
         $user->save();
+        $user->assignRole('Secretary');
+
 
         
 
@@ -38,6 +41,7 @@ class UserSeeder extends Seeder
         $user->course = 'Bsc with Computer Science';
         $user->password = bcrypt('coict2020');
         $user->save();
+        $user->assignRole('Students');
 
         $user = new User();
         $user->name = 'MSIRU MICHAEL';
@@ -45,6 +49,7 @@ class UserSeeder extends Seeder
         $user->course = 'Bsc with Computer Science';
         $user->password = bcrypt('coict2020');
         $user->save();
+        $user->assignRole('Students');
 
         $user = new User();
         $user->name = 'KIWANGO ANOLD';
@@ -52,6 +57,7 @@ class UserSeeder extends Seeder
         $user->course = 'Bsc with Computer Science';
         $user->password = bcrypt('coict2020');
         $user->save();
+        $user->assignRole('Students');
 
         $user = new User();
         $user->name = 'LYIMO PATRICK HENRY ';
@@ -59,6 +65,7 @@ class UserSeeder extends Seeder
         $user->course = 'Bsc with Computer Science';
         $user->password = bcrypt('coict2020');
         $user->save();
+        $user->assignRole('Students');
 
         $user = new User();
         $user->name = 'MEENA NANCY FREDRICK';
@@ -66,6 +73,7 @@ class UserSeeder extends Seeder
         $user->course = 'Bsc in Computer Science';
         $user->password = bcrypt('coict2020');
         $user->save();
+        $user->assignRole('Students');
 
         $user = new User();
         $user->name = 'MKOMAJI ALOYCE';
@@ -73,6 +81,7 @@ class UserSeeder extends Seeder
         $user->course = 'Bsc in Computer Science';
         $user->password = bcrypt('coict2020');
         $user->save();
+        $user->assignRole('Students');
 
         $user = new User();
         $user->name = 'MAFTAH ALLY WAZIRI';
@@ -80,6 +89,7 @@ class UserSeeder extends Seeder
         $user->course = 'Bsc in Computer Science';
         $user->password = bcrypt('coict2020');
         $user->save();
+        $user->assignRole('Students');
 
         $user = new User();
         $user->name = 'MNULI SHABAN ALLY';
@@ -87,6 +97,7 @@ class UserSeeder extends Seeder
         $user->course = 'Bsc in Computer Engineering';
         $user->password = bcrypt('coict2020');
         $user->save();
+        $user->assignRole('Students');
 
         $user = new User();
         $user->name = 'MUJUMBA FREDRICK';
@@ -94,6 +105,7 @@ class UserSeeder extends Seeder
         $user->course = 'Bsc in Computer Engineering';
         $user->password = bcrypt('coict2020');
         $user->save();
+        $user->assignRole('Students');
 
         $user = new User();
         $user->name = 'PAUL AMOSI';
@@ -101,6 +113,7 @@ class UserSeeder extends Seeder
         $user->course = 'Bsc in Computer Engineering';
         $user->password = bcrypt('coict2020');
         $user->save();
+        $user->assignRole('Students');
 
         $user = new User();
         $user->name = 'LYIMO NANCY PATRICK';
@@ -108,6 +121,7 @@ class UserSeeder extends Seeder
         $user->course = 'Bsc in telecommunication';
         $user->password = bcrypt('coict2020');
         $user->save();
+        $user->assignRole('Students');
 
         $user = new User();
         $user->name = 'HENRY PATRICK LYIMO';
@@ -115,6 +129,7 @@ class UserSeeder extends Seeder
         $user->course = 'Bsc in telecommunication';
         $user->password = bcrypt('coict2020');
         $user->save();
+        $user->assignRole('Students');
         
     }
 }

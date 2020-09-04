@@ -68,8 +68,8 @@
             @csrf  
             <div class="row pl-3">
               <div class="col-md-5">
-                <div class="input-group mb-3">
-                  <select class="custom-select" name="category" id="inputGroupSelect01" required>
+                <div class="input-group ">
+                  <select class="custom-select" name="category" id="inputGroupSelect01" required> 
                     <option selected>Nature of Opinion</option>
                     @foreach ($opinionTypes as $opinionType)
                   <option value="{{$opinionType->id }}">{{ $opinionType->category }}</option>
@@ -90,13 +90,13 @@
             <div class="row">
               <div class="col-lg-11">
                 <div class="form-group mr-5 pt-5 text-center ">
-                  <label for="">Please describe in detail about your suggestion</label>
+                  <label for="">Please describe in detail about your opinion</label>
                 <textarea   class="form-control" name="opinion" rows="10" required>{{ $opinionType->body }}  </textarea>
                 </div>
   
                   <div class="row">
                     <div class="mr-5 ml-auto mb-3" >
-                      <button  type="submit" class="btn btn-primary" data-toggle="modal" >SUBMIT</button>
+                      <button  type="submit" class="btn btn-primary" onclick="toastr.success('OPINION SENT');" data-toggle="modal" >SUBMIT</button>
                     </div>
                   </div>
               </div>
